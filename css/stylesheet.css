@@ -9,18 +9,20 @@ layout
   padding: 0 15px;
   margin: 0 auto;
   border: 1px solid #55acee;
-  /*
-    position:fixed;
-    top: 0;
-    z-index:10;
-    */
 }
 
 .l-header01 .l-headerWrapper .l-headerWrapper-left {
   float: left;
 }
 
-.l-header01 .l-headerWrapper .l-headerWrapper-left .p-logo__image-PC {
+.l-header01 .l-headerWrapper .l-headerWrapper-right {
+  float: right;
+}
+
+/*---------------
+object/component
+-----------------*/
+.p-logo__image-PC {
   border: 3px solid #55acee;
   width: 120px;
   height: 120px;
@@ -30,7 +32,7 @@ layout
   left: 80px;
 }
 
-.l-header01 .l-headerWrapper .l-headerWrapper-left .p-logo__image {
+.p-logo__image {
   border: 3px solid #55acee;
   width: 65px;
   height: 65px;
@@ -39,22 +41,11 @@ layout
   left: 8%;
 }
 
-.l-header01 .l-headerWrapper .l-headerWrapper-right {
-  float: right;
-  /*
-      transition: all 0.5s;
-      */
-}
-
-.l-header01 .l-headerWrapper .l-headerWrapper-right .c-login {
+.c-login {
   line-height: 65px;
   padding: 0 25px;
   color: black;
   cursor: pointer;
   display: block;
 }
-
-/*---------------
-object/component
------------------*/
 /*# sourceMappingURL=stylesheet.css.map */
