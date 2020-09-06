@@ -3,11 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>会員登録</title>
+  <title>ROT会員登録</title>
 
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 <body>
+  <header class="l-header01">
+    <div class="l-headerWrapper">
+      <div class="l-headerWrapper-left">
+        <img src="" alt="" class="p-logo__image">
+      </div>
+
+    
+      <div class="l-headerWrapper-right">
+        <div class="c-login">
+          <a>ログイン</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
   <div id="head">
     <h1>会員登録</h1>
   </div>
