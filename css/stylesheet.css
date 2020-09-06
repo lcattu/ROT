@@ -4,6 +4,47 @@ foundation
 /*---------------
 layout
 -----------------*/
+.l-header01 .l-headerWrapper {
+  height: 65px;
+  padding: 0 15px;
+  margin: 0 auto;
+  border: 1px solid #1e90ff;
+  /*
+    position:fixed;
+    top: 0;
+    z-index:10;
+    */
+}
+
+.l-header01 .l-headerWrapper .l-headerWrapper-left {
+  float: left;
+}
+
+.l-header01 .l-headerWrapper .l-headerWrapper-left .p-logo__image {
+  border: 3px solid #1e90ff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: fixed;
+  top: 9px;
+  left: 80px;
+}
+
+.l-header01 .l-headerWrapper .l-headerWrapper-right {
+  float: right;
+  /*
+      transition: all 0.5s;
+      */
+}
+
+.l-header01 .l-headerWrapper .l-headerWrapper-right .c-login {
+  line-height: 65px;
+  padding: 0 25px;
+  color: black;
+  cursor: pointer;
+  display: block;
+}
+
 /*---------------
 object/component
 -----------------*/

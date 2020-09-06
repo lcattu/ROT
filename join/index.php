@@ -11,7 +11,7 @@
   <header class="l-header01">
     <div class="l-headerWrapper">
       <div class="l-headerWrapper-left">
-        <img src="" alt="" class="p-logo__image">
+        <img src="../image/logo_test.jpg" alt="" class="p-logo__image">
       </div>
 
     
