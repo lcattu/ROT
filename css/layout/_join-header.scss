@@ -13,7 +13,7 @@
     .l-headerWrapper-left{
       float:left;
 
-      .p-logo__image{
+      .p-logo__image-PC{
         border:3px solid #1e90ff;
         width:120px;
         height:120px;
@@ -21,6 +21,15 @@
         position:fixed;
         top:9px;
         left:80px;
+      }
+
+      .p-logo__image{
+        border:3px solid #1e90ff;
+        width:65px;
+        height:65px;
+        border-radius:50%;
+        position:fixed;
+        left:8%;
       }
 
     }

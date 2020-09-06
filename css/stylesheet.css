@@ -20,7 +20,7 @@ layout
   float: left;
 }
 
-.l-header01 .l-headerWrapper .l-headerWrapper-left .p-logo__image {
+.l-header01 .l-headerWrapper .l-headerWrapper-left .p-logo__image-PC {
   border: 3px solid #1e90ff;
   width: 120px;
   height: 120px;
@@ -28,6 +28,15 @@ layout
   position: fixed;
   top: 9px;
   left: 80px;
+}
+
+.l-header01 .l-headerWrapper .l-headerWrapper-left .p-logo__image {
+  border: 3px solid #1e90ff;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: fixed;
+  left: 8%;
 }
 
 .l-header01 .l-headerWrapper .l-headerWrapper-right {
