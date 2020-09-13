@@ -43,11 +43,11 @@
           
           <div class="change-btn next-btn" >登録へ→</div>
 
-          <div class="change-btn alter-btn">登録へ→</div>
+          <div class="alter-btn">登録へ→</div>
 
 
 
-          <div class="change-btn regi-btn">登録</div>
+          <div class="regi-btn">登録</div>
         </div>
     </div>
   </div>
