@@ -76,6 +76,12 @@ layout
 
 .p-welcomeWrapper .c-modal__footer .change-btn.prev-btn {
   display: none;
+  float: left;
+}
+
+.p-welcomeWrapper .c-modal__footer .change-btn.regi-btn {
+  display: none;
+  float: right;
 }
 
 .p-welcomeWrapper .c-modal__footer .alter-btn {
@@ -83,18 +89,6 @@ layout
   color: #4e90af;
   float: right;
   background-color: red;
-  width: 80px;
-  padding: 6px 0;
-  margin: 20px 5px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.p-welcomeWrapper .c-modal__footer .regi-btn {
-  display: none;
-  float: right;
-  color: #4e90af;
-  background-color: #e0f5ff;
   width: 80px;
   padding: 6px 0;
   margin: 20px 5px;

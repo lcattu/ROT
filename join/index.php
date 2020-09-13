@@ -47,7 +47,7 @@
 
 
 
-          <div class="regi-btn">登録</div>
+          <div class="change-btn regi-btn">登録</div>
         </div>
     </div>
   </div>

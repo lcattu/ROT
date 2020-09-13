@@ -50,6 +50,11 @@
       }
       &.prev-btn{
         display:none;
+        float:left;
+      }
+      &.regi-btn{
+        display:none;
+        float:right;
       }
       
       
@@ -66,17 +71,7 @@
       border-radius: 3px;
       cursor: pointer;
     }
-    .regi-btn{
-      display:none;
-      float:right;
-      color: #4e90af;
-      background-color: #e0f5ff;
-      width: 80px;
-      padding: 6px 0;
-      margin: 20px 5px;
-      border-radius: 3px;
-      cursor: pointer;
-    }
+
 
   }
 
