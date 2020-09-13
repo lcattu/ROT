@@ -19,6 +19,73 @@ layout
   float: right;
 }
 
+.p-welcomeWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.p-welcomeWrapper .c-modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+.p-welcomeWrapper .c-modal .c-modal__body {
+  height: 100px;
+  display: none;
+}
+
+.p-welcomeWrapper .c-modal .c-modal__body.active {
+  display: block;
+}
+
+.p-welcomeWrapper .c-modal .c-modal__body .c-modal__title {
+  margin: 50px 5px 20px 5px;
+  height: 30px;
+}
+
+.p-welcomeWrapper .c-modal__footer {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.p-welcomeWrapper .c-modal__footer .change-btn {
+  color: #4e90af;
+  background-color: #e0f5ff;
+  width: 80px;
+  padding: 6px 0;
+  margin: 20px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.p-welcomeWrapper .c-modal__footer .change-btn.next-btn {
+  float: right;
+}
+
+.p-welcomeWrapper .c-modal__footer .change-btn.prev-btn {
+  display: none;
+}
+
+.p-welcomeWrapper .c-modal__footer .change-btn.regi-btn {
+  display: none;
+}
+
+.p-welcomeWrapper .c-modal__footer .change-btn.alter-btn {
+  display: none;
+}
+
 /*---------------
 object/component
 -----------------*/
