@@ -31,6 +31,37 @@
           <div class="c-modal__body">
             <h3 class="c-modal__title">#2 登録画面</h3>
             <p>登録ボタンを追加していく</p> 
+            <form action="" method="" enctype="">
+              <dl>
+                <dt>ニックネーム</dt>
+                <dd>
+                  <input type="text">
+                </dd>
+
+                <dt>メールアドレス</dt>
+                <dd>
+                  <input type="text">
+                </dd>
+
+                <dt>パスワード</dt>
+                <dd>
+                  <input type="password">
+                </dd>
+
+                <dt>パスワード(確認)</dt>
+                <dd>
+                </dd>
+
+                <dt></dt>
+                <dd>
+                </dd>
+
+              </dl>
+              <div>
+                <input type="submit">
+              </div>
+            </form>
+
             </div>
 
         </div>
