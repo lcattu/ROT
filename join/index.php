@@ -3,6 +3,42 @@ session_start();
 
 require('../dbconnect.php');
 
+if(!empty($_POST)){
+  // 「空でない=!empty」
+  //  $_POSTが空でないことを確認し、ﾌｫｰﾑが送信されたことを確認
+
+  if($_POST['name']==''){
+    //  print('名前が入力されていません');
+    
+    $error['name']='blank';
+    //  $errorという配列の'name'キーに対し'blank'という値を代入
+	}
+
+
+	if($_POST['email']==''){
+		//print('名前が入力されていません');
+		$error['email']='blank';
+	}
+
+	if(strlen($_POST['password'])<4){
+    //「strlen」ファンクションで確認し、4文字以下である場合は「length」というエラーとして記録
+
+		//print('名前が入力されていません');
+		$error['password']='length';
+	}
+
+  if(empty($error)){
+    //  上記の$error配列が空であるかを確認
+    //  True 空の場合…セッションに値を保存
+    //  次の画面に推移
+
+    $_SESSION['join'] = $_POST;
+    header('Location:https://rot/join/check.php');
+    exit();
+  }
+
+}
+
 
 ?>
 
@@ -34,7 +70,7 @@ require('../dbconnect.php');
         <div class="c-welcomeWrapper">
           <!-- #0 -->
           <!-- !!!!デフォルトactiveｸﾗｽが入ってるやつ -->
-          <div class=" c-modal__body active">
+          <div class=" c-modal__body ">
 
             <h3 class="c-modal__title">#0 Greeting</h3>
             <p>はじめまして。カツノリです<br>Twitter風webアプリ完成しました。よろしかったら、遊んでみてください。</p> 
@@ -49,15 +85,36 @@ require('../dbconnect.php');
             </div>
 
           <!-- #2 -->
-          <div class="c-modal__body">
+          <div class="c-modal__body active">
             <h3 class="c-modal__title">#2 登録画面</h3>
             <p>登録ボタンを追加していく</p> 
             <form action="" method="post" enctype="multipart/form-data">
               <dl>
                 <dt>ニックネーム</dt>
                 <dd>
-                  <input type="text" name="user_name" size="35" maxlength="255" value="<?php print(htmlspecialchars($_POST['user_name'],ENT_QUOTES)); ?>"
+                  <input type="text" name="user_name" size="35" maxlength="255" value="<?php print htmlspecialchars($_POST['name'], ENT_QUOTES); ?>"
                   >
+                  <!-- 
+                  ♦htmlspecialcharsﾌｧﾝｸｼｮﾝ
+                    htmlspecialcharsﾌｧﾝｸｼｮﾝを使うことで、HTMLﾀｸﾞの効果を打ち消して、イタズラのようなコードを無効化する
+
+                  ♦ENT_QUOTES
+                    「定義済みの定数」
+                    これを指定することで
+                      - 「"」が&quot;
+                      - 「’」が&#039 or &apos;
+                      - 「<」が &lt;
+                      - 「>」が &gt;
+                    以上に変換される
+
+                    参考URL(https://www.leon-tec.co.jp/blog/yoshida/8214/)
+                   -->
+
+                  <?php if($error['name'] =='blank'):?>
+      						<p class ="error">ニックネームを入力してください</p>
+					        <?php endif; ?>
+
+
                 </dd>
 
                 <dt>メールアドレス</dt>
@@ -66,28 +123,44 @@ require('../dbconnect.php');
                   value="<?php print(htmlspecialchars($_POST['email'],ENT_QUOTES)); ?>"
                   >
 
+                  <?php if($error['email']==='blank'):?>
+                  <p>メールアドレスを入力してください</p>
+                  <?php endif; ?>
 
                 </dd>
 
                 <dt>パスワード</dt>
                 <dd>
-                  <input type="password" name="password"  size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
+                  <input type="password" name="password"  size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'],ENT_QUOTES)); ?>">
+
+                  <?php if($error['password']==='blank'):?>
+						      <p>パスワードを入力してください</p>
+					        <?php endif; ?>
+					        <?php if($error['password']==='length'):?>
+						      <p>パスワードは4文字以上で入力してください</p>
+					        <?php endif; ?>
+					
 
                 </dd>
 
                 <dt>パスワード(確認)</dt>
                 <dd>
-                  <input type="password" name="password"  size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
+                  <input type="password" name="password"  size="10" maxlength="20" value="">
                 </dd>
 
 
               </dl>
               <div>
-                <input type="submit">
+                <input type="submit" value="入力内容を確認する">
               </div>
             </form>
 
-            </div>
+          </div>
+
+          <!-- #3 -->
+
+          <!-- #4 -->
+
 
         </div>
 
