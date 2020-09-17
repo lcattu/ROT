@@ -1,6 +1,18 @@
-<div class="c-modal__body">
-            <h3 class="c-modal__title">#4 登録画面</h3>
-            <p>ユーザー登録が完了しました</p> 
-            <p><a href="../"></a>ログインする</p>
+<?php require "../head.php"; ?>
+<body>
+  <!-- ヘッダー -->
+  <?php require "join_header.php" ?>
 
-          </div>
+  <h1>Replication of Twitter</h1>
+
+
+  <div class="p-welcomeWrapper">
+
+    <h3 class="c-modal__title">#4 登録画面</h3>
+    <p>ユーザー登録が完了しました</p> 
+    <p><a href="../"></a>ログインする</p>
+
+
+  </div>
+</body>
+<?php require"../footer.php" ?>

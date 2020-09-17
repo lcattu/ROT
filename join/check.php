@@ -4,14 +4,20 @@ session_start();
 require('../dbconnect.php');
 
 if(!isset($_SESSION['join'])){
+  //  joinにセッションがissetされてない場合
+
   header('Location: index.php');
+  //  上記の条件(SESSIONに情報方ない)の場合
+  //  強制的にindex.phpに戻す処理
+  //  例えばURLを直接入力し、check.phpにアクセスした場合
+  //  $_SESSSIONに情報がない状態なので強制的に、index.phpにもどす処理
   exit();
 }
 
 if(!empty($_POST)){
-	$statement = $db->prepare('INSERT INTO users SET user_name=?, email=?, password=?, created=NOW(), update_at=NOW()');
-	$statement->execute(array(
-		$_SESSION['join']['user_name'],
+  $statement = $db->prepare('INSERT INTO users SET name=?, email=?, password=?, created_at=NOW()');
+  $statement->execute(array(
+		$_SESSION['join']['name'],
 		$_SESSION['join']['email'],
 		sha1($_SESSION['join']['password']),
 	));
@@ -24,46 +30,49 @@ if(!empty($_POST)){
 
 
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+
+
+
+<?php require "../head.php"; ?>
 <body>
-<div class="c-modal__body">
-  <h3 class="c-modal__title">#2 登録画面</h3>
+  <!-- ヘッダー -->
+  <?php require "join_header.php" ?>
+
+  <h1>Replication of Twitter</h1>
+
+
+  <div class="mt-5 p-welcomeWrapper">
+  <div class="mt-5">
+  <h3 class="mt-5 c-modal__title">#3 確認画面</h3>
   <p>登録ボタンを追加していく</p> 
-  <form action="" method="post" enctype="multipart/form-data">
+  <form action="" method="post" >
 
-  <input type="hidden" name="action" value="submit" />
-  <dl>
-    <dt>ニックネーム</dt>
-    <dd>
-      <?php echo htmlspecialchars($_SESSION['join']['name'],ENT_QUOTES); ?>
-    </dd>
+    <input type="hidden" name="action" value="submit" />
+    <dl class="mt-5">
+      <dt>ニックネーム</dt>
+      <dd>
+        <?php echo(htmlspecialchars($_SESSION['join']['name'],ENT_QUOTES)); ?>
+      </dd>
 
-    <dt>メールアドレス</dt>
-    <dd>
-      <?php echo htmlspecialchars($_SESSION['join']['email'],ENT_QUTES); ?>
+      <dt>メールアドレス</dt>
+      <dd>
+        <?php echo(htmlspecialchars($_SESSION['join']['email'],ENT_QUOTES)); ?>
 
-    </dd>
+      </dd>
 
-    <dt>パスワード</dt>
-    <dd>
-      【表示されません】
-    </dd>
-  </dl>
+      <dt>パスワード</dt>
+      <dd>
+        【表示されません】
+      </dd>
+    </dl>
 
-  <div>
-    <a href="index.php?action=rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
-    
-  </div>
+    <div>
+      <a href="index.php?action=rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
+      
+    </div>
   </form>
 
 </div>
+  </div>
 </body>
-</html>
-
-
+<?php require"../footer.php" ?>

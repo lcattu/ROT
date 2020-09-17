@@ -4,10 +4,20 @@ session_start();
 require('../dbconnect.php');
 
 if(!empty($_POST)){
+
+}
+
+
+/**
+ * 入力チェック
+*/
+
+if(!empty($_POST)){
   // 「空でない=!empty」
   //  $_POSTが空でないことを確認し、ﾌｫｰﾑが送信されたことを確認
+  //  例えば何も記述されていない状態で再読み込みされた場合にエラーメッセージを出力しないようにする
 
-  if($_POST['name']==''){
+  if($_POST['name']===''){
     //  print('名前が入力されていません');
     
     $error['name']='blank';
@@ -15,7 +25,7 @@ if(!empty($_POST)){
 	}
 
 
-	if($_POST['email']==''){
+	if($_POST['email']===''){
 		//print('名前が入力されていません');
 		$error['email']='blank';
 	}
@@ -25,7 +35,11 @@ if(!empty($_POST)){
 
 		//print('名前が入力されていません');
 		$error['password']='length';
-	}
+  }
+  
+  if($_POST['password']===''){
+    $error['password']='blank';
+  }
 
   if(empty($error)){
     //  上記の$error配列が空であるかを確認
@@ -33,12 +47,20 @@ if(!empty($_POST)){
     //  次の画面に推移
 
     $_SESSION['join'] = $_POST;
-    header('Location:https://rot/join/check.php');
+    header('Location:check.php');
     exit();
   }
 
 }
 
+if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
+  //  check.phpから『書き直す』をクリックした際
+  //  URLﾊﾟﾗﾒｰﾀｰにrewriteがついていた場合
+
+  $_POST = $_SESSION['join'];
+
+
+}
 
 ?>
 
@@ -92,7 +114,7 @@ if(!empty($_POST)){
               <dl>
                 <dt>ニックネーム</dt>
                 <dd>
-                  <input type="text" name="user_name" size="35" maxlength="255" value="<?php print htmlspecialchars($_POST['name'], ENT_QUOTES); ?>"
+                  <input type="text" name="name" size="35" maxlength="255" value="<?php print(htmlspecialchars($_POST['name'],ENT_QUOTES)); ?>"
                   >
                   <!-- 
                   ♦htmlspecialcharsﾌｧﾝｸｼｮﾝ
