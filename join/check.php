@@ -41,38 +41,43 @@ if(!empty($_POST)){
   <h1>Replication of Twitter</h1>
 
 
-  <div class="mt-5 p-welcomeWrapper">
-  <div class="mt-5">
-  <h3 class="mt-5 c-modal__title">#3 確認画面</h3>
-  <p>登録ボタンを追加していく</p> 
-  <form action="" method="post" >
+  <div class=" p-welcomeWrapper">
+    <div class="c-modal">
+      <div class="c-welcomeWrapper">
+      <div class="c-modal__body active">
+            <h3 class="mt-5 c-modal__title">#3 確認画面</h3>
+            <p>登録ボタンを追加していく</p> 
+            <form action="" method="post" >
 
-    <input type="hidden" name="action" value="submit" />
-    <dl class="mt-5">
-      <dt>ニックネーム</dt>
-      <dd>
-        <?php echo(htmlspecialchars($_SESSION['join']['name'],ENT_QUOTES)); ?>
-      </dd>
+              <input type="hidden" name="action" value="submit" />
+              <dl class="mt-5">
+                <dt>ニックネーム</dt>
+                <dd>
+                  <?php echo(htmlspecialchars($_SESSION['join']['name'],ENT_QUOTES)); ?>
+                </dd>
 
-      <dt>メールアドレス</dt>
-      <dd>
-        <?php echo(htmlspecialchars($_SESSION['join']['email'],ENT_QUOTES)); ?>
+                <dt>メールアドレス</dt>
+                <dd>
+                  <?php echo(htmlspecialchars($_SESSION['join']['email'],ENT_QUOTES)); ?>
 
-      </dd>
+                </dd>
 
-      <dt>パスワード</dt>
-      <dd>
-        【表示されません】
-      </dd>
-    </dl>
+                <dt>パスワード</dt>
+                <dd>
+                  【表示されません】
+                </dd>
+              </dl>
 
-    <div>
-      <a href="index.php?action=rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
-      
+              <div>
+                <a href="index.php?action=rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
+                
+              </div>
+            </form>
+
+          </div>
+      </div>  
     </div>
-  </form>
-
-</div>
+          
   </div>
 </body>
 <?php require"../footer.php" ?>
