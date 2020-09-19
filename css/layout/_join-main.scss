@@ -10,10 +10,10 @@
 
   .c-modal{
     position: absolute;
+    
     top: 20%;
     left: 34%;
     background-color: #e6ecf0;
-    padding: 20px 0 40px;
     border-radius: 10px;
     width: 450px;
     height: 500px;
@@ -21,17 +21,16 @@
 
     .c-modal__footer{
       font-size:16px;
-      margin-top:20px;
+    
       .change-btn{
         color: #4e90af;
         background-color: #e0f5ff;
-        width: 80px;
-        padding: 6px 0;
-        margin: 20px 5px;
-        border-radius: 3px;
+        height:500px;
+        border-radius: 10px;
         cursor: pointer;
         &.next-btn{
           float:right;
+          
         }
         &.prev-btn{
           display:none;
@@ -41,17 +40,31 @@
           display:none;
           float:right;
         }
+        .icon{
+          display:flex;
+          height:500px;
+          justify-content:center;
+          align-items:center;
+          flex-direction:column;
+          padding:0 5px;
+        }
       }
       .alter-btn{
         display:none;
         color: #4e90af;
         float:right;
+        border-radius: 10px;
+        height:500px;
         background-color: red;
-        width: 80px;
-        padding: 6px 0;
-        margin: 20px 5px;
-        border-radius: 3px;
         cursor: pointer;
+      }
+      .icon{
+          display:flex;
+          height:500px;
+          justify-content:center;
+          align-items:center;
+          flex-direction:column;
+          padding:0 5px;
       }
     }
 

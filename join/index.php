@@ -78,21 +78,44 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
       <div class="c-modal">
           <!-- change-btn-wrapper -->
           <div class="c-modal__footer">
-            <div class="change-btn prev-btn">←戻る</div>
+            <div class="change-btn prev-btn">
+              <div class="icon">
+                <i class ="fa fa-chevron-left fa-2x"></i>
+                <br>
+                <p>prev</p>
+                
+              
+              </div>
+              
+            </div>
 
             
-            <div class="change-btn next-btn" >登録へ→</div>
+            <div class="change-btn next-btn " >
+              <div class="icon">
+                <i class="fa fa-chevron-right fa-2x"></i>
+                <br>
+                <p>next</p>
+              </div>
+              
+            </div>
 
-            <div class="alter-btn">登録へ→</div>
+            <div class="alter-btn ">
+              <div class="icon">
+                <i class="fa fa-chevron-right fa-2x"></i>
+                <br>
+                next
+              </div>
+              
+            </div>
 
 
 
-            <div class="change-btn regi-btn">登録</div>
+            
           </div>
         <div class="c-welcomeWrapper">
           <!-- #0 -->
           <!-- !!!!デフォルトactiveｸﾗｽが入ってるやつ -->
-          <div class=" c-modal__body ">
+          <div class=" c-modal__body active">
 
             <h3 class="c-modal__title">#0 Greeting</h3>
             <p>はじめまして。カツノリです<br>Twitter風webアプリ完成しました。よろしかったら、遊んでみてください。</p> 
@@ -107,7 +130,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
             </div>
 
           <!-- #2 -->
-          <div class="c-modal__body active">
+          <div class="c-modal__body ">
             <h3 class="c-modal__title">#2 登録画面</h3>
             <p>登録ボタンを追加していく</p> 
             <form action="" method="post" enctype="multipart/form-data">
