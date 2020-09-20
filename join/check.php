@@ -43,6 +43,8 @@ if(!empty($_POST)){
 
   <div class=" p-welcomeWrapper">
     <div class="c-modal">
+
+      
       <div class="c-welcomeWrapper">
       <div class="c-modal__body active">
             <h3 class="mt-5 c-modal__title">#3 確認画面</h3>
@@ -69,7 +71,6 @@ if(!empty($_POST)){
               </dl>
 
               <div>
-                <a href="index.php?action=rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
                 
               </div>
             </form>

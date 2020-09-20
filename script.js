@@ -1,10 +1,6 @@
 $(function(){
 
 
-  
-
-
-
   //  
   $('.change-btn').click(function() {
     var $displaySlide = $('.active');
@@ -40,60 +36,82 @@ $(function(){
 
 
     //  ⑤ ④の変数の宣言で得たインデックス番号による条件分岐
-  if(slideIndex == 0){
+    if(slideIndex == 0){
 
-    $('.prev-btn').hide();
+      $('.prev-btn').hide();
 
 
-    $('.regi-btn').hide();
+      $('.regi-btn').hide();
 
-    $('.alter-btn').hide();
+      $('.alter-btn').hide();
     
 
-  }else if(slideIndex == 1){
+    }else if(slideIndex == 1){
 
-    $('.regi-btn').hide();
+      $('.regi-btn').hide();
 
-    $('.next-btn').hide();
-    $('.alter-btn').show();
-    /** -----------------------
-     * チェックボックスにﾁｪｯｸがあるか否かの確認 
-     ------------------------------------------**/
+      $('.next-btn').hide();
+      $('.alter-btn').show();
 
-    $('#check').click(function(){
-      if($('#check').prop('checked')){
-        $('.next-btn').show();
-        $('.alter-btn').hide();
+      /** -----------------------
+       * チェックボックスにﾁｪｯｸがあるか否かの確認 
+       ------------------------------------------**/
 
-        console.log('OK');
-      }else{
-        $('.next-btn').hide();
-        $('.alter-btn').show();
-        console.log('NO');
-      }
-    });
+      $('#check').click(function(){
+        if($('#check').prop('checked')){
+          $('.next-btn').show();
+          $('.alter-btn').hide();
+
+          console.log('OK');
+        }else{
+          $('.next-btn').hide();
+          $('.alter-btn').show();
+          console.log('NO');
+        }
+      });
        
     
-  }else if(slideIndex == 2){
+    }else if(slideIndex == 2){
 
-    $('.next-btn').hide();
+      $('.next-btn').hide();
 
-    $('.regi-btn').show();
-  }
+      $('.regi-btn').show();
+    }
   });
 
-   //  チェックが入っていたら有効化
-   /** 
-   if('#check').not(':checked')){
-    //  
-    $('.next-btn').removeClass('next-btn');
+
+  /**
+   * check.phpの”書き直し”を押されたときの挙動
+  */
+
+  var URL = 'http://localhost:8888/rot/join/index.php?action=rewrite';
+
+  /*
+  if(location.href=URL){
+    //$('.c-modal__body').removeClass('active');
     
-  } else {
-    //  有効化
-    $('.next-btn').addClass('next-btn');
+    //var modal__bodyIndex = $('.c-welcomeWrapper').index('.c-modal__body');
+
+    //alert();
+
+    //$(modal__bodyIndex == 2).addClass('active');
+
+
+    
   }
   */
 
+  $(window).on('load',function(){
+    if(location.href == "http://localhost:8888/rot/join/index.php?action=rewrite"){
+      $('.c-modal__body').removeClass('active');
+
+      $('.c-modal__body').eq(2).addClass('active');
+    }
+    
+    
+  });
+
+  
 
 
 
