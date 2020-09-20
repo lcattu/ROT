@@ -58,17 +58,19 @@
         background-color: red;
         cursor: pointer;
       }
+
       .icon{
-          display:flex;
-          height:500px;
-          justify-content:center;
-          align-items:center;
-          flex-direction:column;
-          padding:0 5px;
+        display:flex;
+        height:500px;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        padding:0 5px;
       }
     }
 
     .c-modal__body{
+      padding:5px 40.188px;
       height:100px;
       display:none;
       &.active{
@@ -76,6 +78,7 @@
       }
       
       .c-modal__title{
+      text-align: center;
       margin:50px 5px 20px 5px;
       height:30px
       }

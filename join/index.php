@@ -83,7 +83,6 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
                 <i class ="fa fa-chevron-left fa-2x"></i>
                 <br>
                 <p>prev</p>
-                
               
               </div>
               
@@ -107,15 +106,11 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
               </div>
               
             </div>
-
-
-
-            
           </div>
-        <div class="c-welcomeWrapper">
-          <!-- #0 -->
-          <!-- !!!!デフォルトactiveｸﾗｽが入ってるやつ -->
-          <div class=" c-modal__body active">
+          <div class="c-welcomeWrapper">
+            <!-- #0 -->
+            <!-- !!!!デフォルトactiveｸﾗｽが入ってるやつ -->
+            <div class=" c-modal__body active">
 
             <h3 class="c-modal__title">#0 Greeting</h3>
             <p>はじめまして。カツノリです<br>Twitter風webアプリ完成しました。よろしかったら、遊んでみてください。</p> 
