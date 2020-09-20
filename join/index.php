@@ -47,6 +47,13 @@ if(!empty($_POST)){
     $error['password']='blank';
   }
 
+
+  if($_POST['certify_password'] === ''){
+    $error['certify_password'] = 'blank';
+  }
+
+  
+
   if(empty($error)){
     //  上記の$error配列が空であるかを確認
     //  True 空の場合…セッションに値を保存
@@ -195,8 +202,21 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 
                 <dt>パスワード(確認)</dt>
                 <dd>
-                  <input type="password" name="password"  size="10" maxlength="20" value="">
+                  <input type="password" name="certify_password"  size="10" maxlength="20" value="
+                  <?php print(htmlspecialchars($_POST['certify_password'], ENT_QUOTES)); ?>
+                  ">
                 </dd>
+                <?php if($error['certify_password'] ==='blank'): ?>
+						      <p>確認パスワードを入力してください</p>
+					      <?php endif; ?>
+
+                <?php if($_POST['certify_password'] !== $_POST['password']): ?>
+                <?php $error['certify_password'] = 'check' ?>
+                
+                  <p>パスワードと確認パスワードが一致しません</p>
+                <?php endif;?>
+
+                
 
 
               </dl>
