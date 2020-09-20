@@ -41,21 +41,18 @@ $(function(){
       $('.prev-btn').hide();
 
 
-      $('.regi-btn').hide();
-
       $('.alter-btn').hide();
     
 
     }else if(slideIndex == 1){
 
-      $('.regi-btn').hide();
 
       $('.next-btn').hide();
       $('.alter-btn').show();
 
       /** -----------------------
        * チェックボックスにﾁｪｯｸがあるか否かの確認 
-       ------------------------------------------**/
+      ------------------------------------------**/
 
       $('#check').click(function(){
         if($('#check').prop('checked')){
@@ -109,7 +106,7 @@ $(function(){
     }
     
     
-  });
+  })
 
   
 
