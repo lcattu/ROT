@@ -15,11 +15,13 @@ if(!isset($_SESSION['join'])){
 }
 
 if(!empty($_POST)){
-  $statement = $db->prepare('INSERT INTO users SET user_name=?,mail=?, created_at=NOW()');
+  $statement = $db->prepare('INSERT INTO users SET user_name=?,mail=?, password=?, certify_password=?, created_at=NOW()');
   $statement->execute(array(
     $_SESSION['join']['name'],
-    $_SESSION['join']['email']
-    
+    $_SESSION['join']['email'],
+    sha1($_SESSION['join']['password']),
+    sha1($_SESSION['join']['certify_password'])
+
 	));
 	unset($_SESSION['join']);
 
@@ -71,6 +73,7 @@ if(!empty($_POST)){
               </dl>
 
               <div>
+                <a href="index.php?action=rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
                 
               </div>
             </form>
