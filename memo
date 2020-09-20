@@ -5,3 +5,13 @@
 20200919(sat)
 -登録UIの流れ訂正
  -問題点の洗い出し
+
+20200920(sun)
+-登録UIの流れ訂正
+ 〇モーダルのコンテンツがボタンの有無でtext-alignがズレる問題
+
+ -index.phpで ﾓｰﾀﾞﾙ#3 でemailの正規表現をcheckとError表示
+ -index.phpで ﾓｰﾀﾞﾙ#3 で 確認用パスワードのcheckとError表示
+
+ -check.php から『戻る』とbtn indexがおかしくなる
+ 
