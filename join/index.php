@@ -180,10 +180,10 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
                     <p>メールアドレスを入力してください</p>
                   <?php endif; ?>
 
-                  <?php if($error['email']='check'):?>
+                  <?php if($error['email']==='check'):?>
                     <p>正しくメールアドレスが入力されていないようです</p>
                   <?php endif; ?>
-                  
+
                 </dd>
 
                 <dt>パスワード</dt>
