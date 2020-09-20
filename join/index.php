@@ -25,10 +25,16 @@ if(!empty($_POST)){
 	}
 
 
+
 	if($_POST['email']===''){
 		//print('名前が入力されていません');
 		$error['email']='blank';
-	}
+  }
+
+  if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+  }else{
+    $error['email']='check';
+  }
 
 	if(strlen($_POST['password'])<4){
     //「strlen」ファンクションで確認し、4文字以下である場合は「length」というエラーとして記録
@@ -164,9 +170,13 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
                   >
 
                   <?php if($error['email']==='blank'):?>
-                  <p>メールアドレスを入力してください</p>
+                    <p>メールアドレスを入力してください</p>
                   <?php endif; ?>
 
+                  <?php if($error['email']='check'):?>
+                    <p>正しくメールアドレスが入力されていないようです</p>
+                  <?php endif; ?>
+                  
                 </dd>
 
                 <dt>パスワード</dt>
