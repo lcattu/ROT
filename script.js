@@ -1,27 +1,9 @@
 $(function(){
 
-  $('.index-btn').click(function(){
-    $('.active').removeClass('active');
-
-    var clickedIndex = $('.index-btn').index($(this));
-
-    $('.c-modal__body').eq(clickedIndex).addClass('active');
-  });
-
-  //
 
   
 
-  /*
-  hideメソッドを用いて、
-  ・slideIndexが0のとき、
-  .prev-btn
-  要素を隠してください。
-  ・slideIndexが2のとき、
-  .next-btn
-  要素を隠す。
-  
-  */
+
 
   //  
   $('.change-btn').click(function() {
