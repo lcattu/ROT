@@ -3,9 +3,6 @@ session_start();
 
 require('../dbconnect.php');
 
-if(!empty($_POST)){
-
-}
 
 
 /**
