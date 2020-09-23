@@ -61,7 +61,11 @@ if(!empty($_POST)){
     exit();
   }
 
+  
+
 }
+
+$regi_check = !empty($error);
 
 if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   //  check.phpから『書き直す』をクリックした際
@@ -72,7 +76,17 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 
 }
 
+
+
 ?>
+
+
+<script>
+ var php = {
+  regi_check : "<?php echo $regi_check; ?>"
+ };
+</script>
+
 
 <?php require "../head.php"; ?>
 <body>
@@ -130,6 +144,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
           <div class="c-modal__body">
             <h3 class="c-modal__title">#1 プライバシーポリシー</h3>
             <p>約束してちょ</p>
+            
             <input id="check" type="checkbox" >上記に同意する
 
             </div>
@@ -214,11 +229,11 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
                 <?php endif;?>
 
                 
-
+                  
 
               </dl>
               <div>
-                <input type="submit" value="入力内容を確認する">
+                <input type="submit" value="入力内容を確認する" class="input-btn">
               </div>
             </form>
 

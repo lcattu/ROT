@@ -108,7 +108,14 @@ $(function(){
     
   })
 
+  var regiCheck = console.log(php.regi_check);
+
   
+  if(regiCheck = 1 ){
+    $('.c-modal__body').removeClass('active');
+
+    $('.c-modal__body').eq(2).addClass('active');
+  }
 
 
 
