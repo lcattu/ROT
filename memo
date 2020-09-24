@@ -19,6 +19,7 @@
 - 登録UIの流れ推移訂正
 
 20200925(fri)
+- f_check.php から『戻る』とbtn indexがおかしくなる
 - j_不要なコードを消去
 - k_join/index.php、scssの分割等､コードの整理
 - l_inputタグのCSS
