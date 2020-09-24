@@ -58,14 +58,8 @@ if(!empty($_POST)){
 
     $_SESSION['join'] = $_POST;
     header('Location:check.php');
-  }elseif(!empty($error)){
-
-    /*
-    $regi_check = !empty($error);
-    echo $regi_check;
-    */
-    //header('Location:index.php?action=rewrite');
   }
+
 
   
 
@@ -87,14 +81,6 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 
 
 ?>
-
-
-<script>
- var php = {
-  regi_check : "<?php echo $regi_check; ?>"
- };
-</script>
-
 
 <?php require "../head.php"; ?>
 <body>
