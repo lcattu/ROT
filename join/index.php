@@ -58,14 +58,22 @@ if(!empty($_POST)){
 
     $_SESSION['join'] = $_POST;
     header('Location:check.php');
-    exit();
+  }elseif(!empty($error)){
+
+    /*
+    $regi_check = !empty($error);
+    echo $regi_check;
+    */
+    //header('Location:index.php?action=rewrite');
   }
 
   
 
 }
 
-$regi_check = !empty($error);
+
+
+
 
 if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   //  check.phpから『書き直す』をクリックした際
@@ -189,11 +197,11 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
                   >
 
                   <?php if($error['email']==='blank'):?>
-                    <p>メールアドレスを入力してください</p>
+                    <p class ="error">メールアドレスを入力してください</p>
                   <?php endif; ?>
 
                   <?php if($error['email']==='check'):?>
-                    <p>正しくメールアドレスが入力されていないようです</p>
+                    <p class ="error">正しくメールアドレスが入力されていないようです</p>
                   <?php endif; ?>
 
                 </dd>
@@ -203,10 +211,10 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
                   <input type="password" name="password"  size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'],ENT_QUOTES)); ?>">
 
                   <?php if($error['password']==='blank'):?>
-						      <p>パスワードを入力してください</p>
+						      <p class ="error">パスワードを入力してください</p>
 					        <?php endif; ?>
 					        <?php if($error['password']==='length'):?>
-						      <p>パスワードは4文字以上で入力してください</p>
+						      <p class ="error">パスワードは4文字以上で入力してください</p>
 					        <?php endif; ?>
 					
 
@@ -219,13 +227,13 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
                   ">
                 </dd>
                 <?php if($error['certify_password'] ==='blank'): ?>
-						      <p>確認パスワードを入力してください</p>
+						      <p class ="error">確認パスワードを入力してください</p>
 					      <?php endif; ?>
 
                 <?php if($_POST['certify_password'] !== $_POST['password']): ?>
                 <?php $error['certify_password'] = 'check' ?>
                 
-                  <p>パスワードと確認パスワードが一致しません</p>
+                  <p class ="error">パスワードと確認パスワードが一致しません</p>
                 <?php endif;?>
 
                 
