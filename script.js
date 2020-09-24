@@ -34,7 +34,7 @@ $(function(){
 
     $('.change-btn').show();
 
-
+    //  ボタン表示・非表示に関するプログラム
     //  ⑤ ④の変数の宣言で得たインデックス番号による条件分岐
     if(slideIndex == 0){
 
@@ -77,26 +77,12 @@ $(function(){
   });
 
 
-  /**
+  /**----------------------------------------
    * check.phpの”書き直し”を押されたときの挙動
-  */
+  --------------------------------------------*/
 
   var URL = 'http://localhost:8888/rot/join/index.php?action=rewrite';
 
-  /*
-  if(location.href=URL){
-    //$('.c-modal__body').removeClass('active');
-    
-    //var modal__bodyIndex = $('.c-welcomeWrapper').index('.c-modal__body');
-
-    //alert();
-
-    //$(modal__bodyIndex == 2).addClass('active');
-
-
-    
-  }
-  */
 
   $(window).on('load',function(){
     if(location.href == "http://localhost:8888/rot/join/index.php?action=rewrite"){
@@ -107,6 +93,12 @@ $(function(){
     
     
   })
+
+  /**----------------------------------------
+   * join/index.php
+   * ”入力内容を確認する”ボタンを押されたときの
+   * c-modal__bodyのインデックスへの挙動
+  --------------------------------------------*/
 
   if($('p').hasClass('error')){
     console.log('find error');
