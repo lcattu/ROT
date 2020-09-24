@@ -28,6 +28,9 @@ $(function(){
         $displaySlide.prev().addClass('active');
     }
 
+
+
+
     var slideIndex = $('.c-modal__body').index($('.active'));
     //  ④ 変数slideIndexに 「.c-modal__body」の中の「.active」要素のインデックス番号を代入
 
@@ -73,6 +76,8 @@ $(function(){
       $('.next-btn').hide();
 
       $('.regi-btn').show();
+
+      
     }
   });
 
@@ -90,7 +95,15 @@ $(function(){
 
       $('.c-modal__body').eq(2).addClass('active');
     }
-    
+
+    /**
+     *ボタン表示の修正 
+     */
+    if($('.c-modal__body').eq(2).addClass('active')){
+      $('.prev-btn').show();
+      $('.alter-btn').hide();
+      $('.next-btn').hide();
+    }
     
   })
 
@@ -101,12 +114,21 @@ $(function(){
   --------------------------------------------*/
 
   if($('p').hasClass('error')){
+
     console.log('find error');
     $('.error').css({"color":"red"});
     $('.c-modal__body').removeClass('active');
 
-
+    /**
+     *ボタン表示の修正 
+     */
     $('.c-modal__body').eq(2).addClass('active');
+    if($('.c-modal__body').eq(2).addClass('active')){
+      $('.prev-btn').show();
+      $('.alter-btn').hide();
+      $('.next-btn').hide();
+    }
+    
   }
 
 });
