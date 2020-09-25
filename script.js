@@ -92,19 +92,19 @@ $(function(){
   $(window).on('load',function(){
     if(location.href == "http://localhost:8888/rot/join/index.php?action=rewrite"){
       $('.c-modal__body').removeClass('active');
-
+      console.log('');
       $('.c-modal__body').eq(2).addClass('active');
-    }
-
-    /**
+      /**
      *ボタン表示の修正 
      */
-    if($('.c-modal__body').eq(2).addClass('active')){
+      console.log('join/check.php『戻るボタン』がクリックされました');
       $('.prev-btn').show();
       $('.alter-btn').hide();
       $('.next-btn').hide();
+
     }
-    
+
+        
   })
 
   /**----------------------------------------
@@ -115,15 +115,21 @@ $(function(){
 
   if($('p').hasClass('error')){
 
-    console.log('find error');
+    console.log('find error#1');
+
+
     $('.error').css({"color":"red"});
     $('.c-modal__body').removeClass('active');
+    $('.c-modal__body').eq(2).addClass('active');
+
 
     /**
      *ボタン表示の修正 
      */
-    $('.c-modal__body').eq(2).addClass('active');
+    
     if($('.c-modal__body').eq(2).addClass('active')){
+      console.log('find error#2');
+
       $('.prev-btn').show();
       $('.alter-btn').hide();
       $('.next-btn').hide();
