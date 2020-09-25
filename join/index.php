@@ -85,7 +85,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 <?php require "../head.php"; ?>
 <body>
   <!-- ヘッダー -->
-  <?php require "join_header.php" ?>
+  <?php require "join_header.php"; ?>
 
   <h1>Replication of Twitter</h1>
 
@@ -136,11 +136,15 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
           
           <!-- #1 -->
           <div class="c-modal__body">
-            <h3 class="c-modal__title">#1 プライバシーポリシー</h3>
+            <h4 class="c-modal__title">#1 プライバシーポリシー</h3>
             <p>約束してちょ</p>
-            
-            <input id="check" type="checkbox" >上記に同意する
-
+              <div class="c-modal__txtArea">
+              
+                <?php include('privacy&policy.php'); ?>
+              </div>
+              <div>
+              <input id="check" type="checkbox" >上記に同意する
+              </div>
             </div>
 
           <!-- #2 -->

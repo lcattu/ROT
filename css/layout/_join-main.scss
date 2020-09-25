@@ -49,6 +49,7 @@
           padding:0 5px;
         }
       }
+
       .alter-btn{
         display:none;
         color: #4e90af;
@@ -75,6 +76,13 @@
       display:none;
       &.active{
         display:block;
+      }
+      .c-modal__txtArea{
+        background-color:white;
+        height:250px;
+        width:300px;
+        overflow: scroll;
+
       }
       
       .c-modal__title{

@@ -122,6 +122,13 @@ layout
   display: block;
 }
 
+.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea {
+  background-color: white;
+  height: 250px;
+  width: 300px;
+  overflow: scroll;
+}
+
 .p-welcomeWrapper .c-modal .c-modal__body .c-modal__title {
   text-align: center;
   margin: 50px 5px 20px 5px;
