@@ -136,14 +136,13 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
           
           <!-- #1 -->
           <div class="c-modal__body">
-            <h4 class="c-modal__title">#1 プライバシーポリシー</h3>
-            <p>約束してちょ</p>
+            <h4 class="c-modal__title">個人情報取扱指針</h3>
               <div class="c-modal__txtArea">
               
                 <?php include('privacy&policy.php'); ?>
               </div>
-              <div>
-              <input id="check" type="checkbox" >上記に同意する
+              <div class = c-modal__checkBtn>
+                <input id="check" type="checkbox" >上記に同意する
               </div>
             </div>
 
