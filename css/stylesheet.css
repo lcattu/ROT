@@ -20,6 +20,7 @@ layout
 }
 
 .p-welcomeWrapper {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -38,6 +39,14 @@ layout
   width: 450px;
   height: 500px;
   text-align: center;
+}
+
+.p-welcomeWrapper .c-modal .closeBtn {
+  width: 40.188px;
+  margin: 0px;
+  float: right;
+  z-index: 90;
+  cursor: pointer;
 }
 
 .p-welcomeWrapper .c-modal .c-modal__footer {

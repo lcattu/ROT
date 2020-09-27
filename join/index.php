@@ -89,12 +89,21 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 
   <h1>Replication of Twitter</h1>
 
+  <div class="startBtn">
+  登録
+  </div>
+
+  <div class="loginBtn">
+  ログイン
+  </div>
 
   <div class="p-welcomeWrapper">
-
         <!--#0 p-greetingModal -->
       <div class="c-modal">
           <!-- change-btn-wrapper -->
+          <div class="closeBtn">
+            <i class="fa fa-2x fa-times"></i>
+          </div>
           <div class="c-modal__footer">
             <div class="change-btn prev-btn">
               <div class="icon">
@@ -128,7 +137,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
           <div class="c-welcomeWrapper">
             <!-- #0 -->
             <!-- !!!!デフォルトactiveｸﾗｽが入ってるやつ -->
-            <div class=" c-modal__body active">
+            <div class=" c-modal__body">
 
             <h3 class="c-modal__title">#0 Greeting</h3>
             <p>はじめまして。カツノリです<br>Twitter風webアプリ完成しました。よろしかったら、遊んでみてください。</p> 

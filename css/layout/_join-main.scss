@@ -1,5 +1,6 @@
 
 .p-welcomeWrapper{
+  display:none;
   position: fixed;
   top: 0;
   right: 0; 
@@ -9,15 +10,22 @@
   z-index: 100;
 
   .c-modal{
-    position: absolute;
-    
-    top: 20%;
-    left: 34%;
+    //親要素.pwelcomeWrapper(fix)を基準にした相対位置
+    position:relative;
+    top:50%;
     background-color: #e6ecf0;
     border-radius: 10px;
     width: 450px;
     height: 500px;
+    margin:auto;
     text-align: center;
+    .closeBtn{
+      width:40.188px;
+      margin:0px;
+      float:right;
+      z-index:90;
+      cursor:pointer;
+    }
 
     .c-modal__footer{
       font-size:16px;

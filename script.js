@@ -1,5 +1,19 @@
 $(function(){
+  $('.startBtn').click(function(){
+    console.log('push1');
+    $('.p-welcomeWrapper').fadeIn();
+    $('.c-modal__body').eq(0).addClass('active');
+    $('.prev-btn').hide();
+    $('.alter-btn').hide();
+    $('.next-btn').show();
 
+  });
+
+  $('.closeBtn').click(function(){
+    console.log('push! closeBtn');
+    $('.p-welcomeWrapper').fadeOut();
+    $('.c-modal__body').removeClass('active');
+  })
 
   //  
   $('.change-btn').click(function() {
