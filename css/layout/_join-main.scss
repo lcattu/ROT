@@ -10,9 +10,8 @@
   z-index: 100;
 
   .c-modal{
-    //親要素.pwelcomeWrapper(fix)を基準にした相対位置
     position:relative;
-    top:50%;
+    top:25%;
     background-color: #e6ecf0;
     border-radius: 10px;
     width: 450px;
@@ -22,8 +21,10 @@
     .closeBtn{
       width:40.188px;
       margin:0px;
-      float:right;
-      z-index:90;
+      position: absolute;
+      top:0.5%;
+      left:91%;
+      z-index:300;
       cursor:pointer;
     }
 
