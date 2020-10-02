@@ -90,12 +90,24 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   <h1>Replication of Twitter</h1>
 
   <div class="startBtn">
-  登録
+  <a>登録</a>
   </div>
 
   <div class="loginBtn">
-  ログイン
+  <a>ログイン</a>
   </div>
+
+  <div class="p-loginWrapper">
+    <div class="c-modal">
+      <div class="closeBtn">
+        <i class="fa fa-2x fa-times"></i>
+      </div>
+      <div class="c-modal__regiBody">
+        <h1>hogehoge</h1>
+      </div>
+    </div>
+  </div>
+  
 
   <div class="p-welcomeWrapper">
         <!--#0 p-greetingModal -->

@@ -19,6 +19,74 @@ layout
   float: right;
 }
 
+.startBtn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  background-color: #239b76;
+  cursor: pointer;
+  position: relative;
+  top: 300px;
+  left: 550px;
+}
+
+.loginBtn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  background-color: #239b76;
+  cursor: pointer;
+  position: relative;
+  top: 300px;
+  left: 580px;
+}
+
+.p-loginWrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.p-loginWrapper .c-modal {
+  position: relative;
+  top: 25%;
+  background-color: #e6ecf0;
+  border-radius: 10px;
+  width: 450px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.p-loginWrapper .c-modal .closeBtn {
+  width: 40.188px;
+  margin: 0px;
+  position: absolute;
+  top: 0.5%;
+  left: 91%;
+  z-index: 300;
+  cursor: pointer;
+}
+
+.p-loginWrapper .c-modal .c-modal__regiBody {
+  padding: 5px 40.188px;
+  height: 100px;
+  display: none;
+}
+
+.p-loginWrapper .c-modal .c-modal__regiBody.active {
+  display: block;
+}
+
 .p-welcomeWrapper {
   display: none;
   position: fixed;

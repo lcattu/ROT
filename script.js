@@ -1,4 +1,16 @@
 $(function(){
+  $('.loginBtn').click(function(){
+    console.log('push_loginBtn');
+
+
+    $('.p-loginWrapper').fadeIn();
+    
+    $('.c-modal__regiBody').addClass('active');
+    
+
+  });
+
+
   $('.startBtn').click(function(){
     console.log('push1');
     $('.p-welcomeWrapper').fadeIn();
@@ -11,7 +23,13 @@ $(function(){
 
   $('.closeBtn').click(function(){
     console.log('push! closeBtn');
+    $('.p-loginWrapper').fadeOut();
+    
+
     $('.p-welcomeWrapper').fadeOut();
+
+    $('.c-modal__regiBody').removeClass('active');
+
     $('.c-modal__body').removeClass('active');
   })
 
