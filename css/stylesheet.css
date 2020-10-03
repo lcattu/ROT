@@ -87,7 +87,7 @@ layout
   display: block;
 }
 
-.p-welcomeWrapper {
+.l-welcomeWrapper {
   display: none;
   position: fixed;
   top: 0;
@@ -98,7 +98,7 @@ layout
   z-index: 100;
 }
 
-.p-welcomeWrapper .c-modal {
+.l-welcomeWrapper .c-modal {
   position: relative;
   top: 25%;
   background-color: #e6ecf0;
@@ -109,7 +109,7 @@ layout
   text-align: center;
 }
 
-.p-welcomeWrapper .c-modal .closeBtn {
+.l-welcomeWrapper .c-modal .closeBtn {
   width: 40.188px;
   margin: 0px;
   position: absolute;
@@ -119,11 +119,11 @@ layout
   cursor: pointer;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer {
+.l-welcomeWrapper .c-modal .c-modal__footer {
   font-size: 16px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer .change-btn {
+.l-welcomeWrapper .c-modal .c-modal__footer .change-btn {
   color: #4e90af;
   background-color: #e0f5ff;
   height: 500px;
@@ -131,21 +131,21 @@ layout
   cursor: pointer;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer .change-btn.next-btn {
+.l-welcomeWrapper .c-modal .c-modal__footer .change-btn.next-btn {
   float: right;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer .change-btn.prev-btn {
+.l-welcomeWrapper .c-modal .c-modal__footer .change-btn.prev-btn {
   display: none;
   float: left;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer .change-btn.regi-btn {
+.l-welcomeWrapper .c-modal .c-modal__footer .change-btn.regi-btn {
   display: none;
   float: right;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer .change-btn .icon {
+.l-welcomeWrapper .c-modal .c-modal__footer .change-btn .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +163,7 @@ layout
   padding: 0 5px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer .alter-btn {
+.l-welcomeWrapper .c-modal .c-modal__footer .alter-btn {
   display: none;
   color: #4e90af;
   float: right;
@@ -173,7 +173,7 @@ layout
   cursor: pointer;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__footer .icon {
+.l-welcomeWrapper .c-modal .c-modal__footer .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,23 +191,23 @@ layout
   padding: 0 5px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body {
+.l-welcomeWrapper .c-modal .c-modal__body {
   padding: 5px 40.188px;
   height: 100px;
   display: none;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body.active {
+.l-welcomeWrapper .c-modal .c-modal__body.active {
   display: block;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__title {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__title {
   text-align: center;
   margin: 35px 5px 20px 5px;
   height: 30px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea {
   margin: auto;
   border-radius: 5px;
   background-color: white;
@@ -216,35 +216,35 @@ layout
   overflow: scroll;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text {
   padding: 5px 20px 20px 20px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text h3 {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text h3 {
   font-size: 25px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text h4 {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text h4 {
   padding-top: 20px;
   font-size: 20px;
   text-align: left;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text p {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text p {
   text-align: left;
   margin-bottom: 3px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text ol {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text ol {
   margin-bottom: 0px;
   padding-left: 30px;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text ol li {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__txtArea .txtArea-text ol li {
   text-align: left;
 }
 
-.p-welcomeWrapper .c-modal .c-modal__body .c-modal__checkBtn {
+.l-welcomeWrapper .c-modal .c-modal__body .c-modal__checkBtn {
   margin-top: 20px;
 }
 
