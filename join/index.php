@@ -111,7 +111,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 
   <div class="l-welcomeWrapper">
         <!--#0 p-greetingModal -->
-    <div class="c-modal">
+    <div class="l-modal">
           <!-- change-btn-wrapper -->
           <div class="closeBtn">
             <i class="fa fa-2x fa-times"></i>
