@@ -13,7 +13,7 @@ $(function(){
 
   $('.startBtn').click(function(){
     console.log('push1');
-    $('.l-welcomeWrapper').fadeIn();
+    $('.c-welcomeWrapper').fadeIn();
     $('.c-modal__body').eq(0).addClass('active');
     $('.prev-btn').hide();
     $('.alter-btn').hide();
@@ -26,7 +26,7 @@ $(function(){
     $('.p-loginWrapper').fadeOut();
     
 
-    $('.l-welcomeWrapper').fadeOut();
+    $('.c-welcomeWrapper').fadeOut();
 
     $('.c-modal__regiBody').removeClass('active');
 

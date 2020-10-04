@@ -1,0 +1,26 @@
+/*------------------------------
+_join-main.scss
+------------------------------*/
+
+/*component-------------------*/
+.c-welcomeWrapper{
+  display:none;
+  position: fixed;
+  top: 0;
+  right: 0; 
+  bottom: 0;
+  left: 0;
+  background-color:$modalBack-color;
+  z-index: 100;
+}
+
+.c-modalWrapper{
+  position:relative;
+  top:25%;
+  background-color: #e6ecf0;
+  border-radius: 10px;
+  width: 450px;
+  height: 500px;
+  margin:auto;
+  text-align: center;
+}
