@@ -89,11 +89,11 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 
   <h1>Replication of Twitter</h1>
 
-  <div class="startBtn">
+  <div class="p-startBtn">
   <a>登録</a>
   </div>
 
-  <div class="loginBtn">
+  <div class="p-loginBtn">
   <a>ログイン</a>
   </div>
 
