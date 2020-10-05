@@ -190,13 +190,13 @@ join_c-loginWrapper
   z-index: 100;
 }
 
-.c-modal__regiBody {
+.c-loginWrapper .c-modal__regiBody {
   padding: 5px 40.188px;
   height: 100px;
   display: none;
 }
 
-.c-modal__regiBody.active {
+.c-loginWrapper .c-modal__regiBody.active {
   display: block;
 }
 
