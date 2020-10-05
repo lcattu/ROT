@@ -6,13 +6,11 @@
         <i class="fa fa-2x fa-times"></i>
       </div>
 
-      <div class="c-modal__footer">
+      <div class="p-modal__btnWrapper">
         <div class="change-btn prev-btn">
           <div class="icon">
             <i class ="fa fa-chevron-left fa-2x"></i>
-            <br>
             <p>prev</p>
-          
           </div>
           
         </div>
@@ -21,7 +19,6 @@
         <div class="change-btn next-btn " >
           <div class="icon">
             <i class="fa fa-chevron-right fa-2x"></i>
-            <br>
             <p>next</p>
           </div>
           
