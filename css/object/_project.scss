@@ -21,12 +21,50 @@ join_header.php
 }
 
 
-  .p-login{
-    line-height: 65px;
-    padding: 0 25px;
-    color: black;
-    cursor: pointer;
-    display: block;
-  }
+.p-login{
+  line-height: 65px;
+  padding: 0 25px;
+  color: black;
+  cursor: pointer;
+  display: block;
+}
 
-  
+/*-----------------------------
+join_body
+--------------------------------*/  
+.p-startBtn{
+  padding:8px 24px;
+  color:white;
+  display:inline-block;
+  opacity:0.8;
+  border-radius:4px;
+  background-color:#239b76;
+  cursor: pointer;
+  position:relative;
+  top:300px;
+  left:550px;
+}
+.p-loginBtn{
+  padding:8px 24px;
+  color:white;
+  display:inline-block;
+  opacity:0.8;
+  border-radius:4px;
+  background-color:#239b76;
+  cursor: pointer;
+  position:relative;
+  top:300px;
+  left:580px;
+}
+
+
+
+.p-closeBtn{
+  width:40.188px;
+  margin:0px;
+  position: absolute;
+  top:0.5%;
+  left:91%;
+  z-index:300;
+  cursor:pointer;
+}

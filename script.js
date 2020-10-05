@@ -1,5 +1,5 @@
 $(function(){
-  $('.loginBtn').click(function(){
+  $('.p-loginBtn').click(function(){
     console.log('push_loginBtn');
 
 
@@ -11,7 +11,7 @@ $(function(){
   });
 
 
-  $('.startBtn').click(function(){
+  $('.p-startBtn').click(function(){
     console.log('push1');
     $('.c-welcomeWrapper').fadeIn();
     $('.c-modal__body').eq(0).addClass('active');
