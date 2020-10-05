@@ -45,7 +45,7 @@ layout
   left: 580px;
 }
 
-.p-loginWrapper {
+.c-loginWrapper {
   display: none;
   position: fixed;
   top: 0;
@@ -56,27 +56,17 @@ layout
   z-index: 100;
 }
 
-.p-loginWrapper .closeBtn {
-  width: 40.188px;
-  margin: 0px;
-  position: absolute;
-  top: 0.5%;
-  left: 91%;
-  z-index: 300;
-  cursor: pointer;
-}
-
-.p-loginWrapper .c-modal__regiBody {
+.c-modal__regiBody {
   padding: 5px 40.188px;
   height: 100px;
   display: none;
 }
 
-.p-loginWrapper .c-modal__regiBody.active {
+.c-modal__regiBody.active {
   display: block;
 }
 
-.closeBtn {
+.p-closeBtn {
   width: 40.188px;
   margin: 0px;
   position: absolute;

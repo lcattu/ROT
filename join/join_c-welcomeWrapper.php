@@ -2,7 +2,7 @@
     <!--#0 p-greetingModal -->
     <div class="c-modalWrapper">
       <!-- change-btn-wrapper -->
-      <div class="closeBtn">
+      <div class="p-closeBtn">
         <i class="fa fa-2x fa-times"></i>
       </div>
 
@@ -39,7 +39,7 @@
 
 
       <!-- #0 -->
-      <!-- !!!!デフォルトactiveｸﾗｽが入ってるやつ -->
+      
       <div class=" c-modal__body">
 
         <h3 class="c-modal__title">#0 Greeting</h3>

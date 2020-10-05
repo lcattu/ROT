@@ -97,9 +97,9 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   <a>ログイン</a>
   </div>
 
-  <div class="p-loginWrapper">
+  <div class="c-loginWrapper">
     <div class="c-modalWrapper">
-      <div class="closeBtn">
+      <div class="p-closeBtn">
         <i class="fa fa-2x fa-times"></i>
       </div>
       <div class="c-modal__regiBody">

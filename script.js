@@ -3,7 +3,7 @@ $(function(){
     console.log('push_loginBtn');
 
 
-    $('.p-loginWrapper').fadeIn();
+    $('.c-loginWrapper').fadeIn();
     
     $('.c-modal__regiBody').addClass('active');
     
@@ -21,9 +21,9 @@ $(function(){
 
   });
 
-  $('.closeBtn').click(function(){
-    console.log('push! closeBtn');
-    $('.p-loginWrapper').fadeOut();
+  $('.p-closeBtn').click(function(){
+    console.log('push! p-closeBtn');
+    $('.c-loginWrapper').fadeOut();
     
 
     $('.c-welcomeWrapper').fadeOut();
