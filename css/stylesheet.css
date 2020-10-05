@@ -19,11 +19,11 @@ layout
   float: right;
 }
 
-.c-modal__footer {
+.p-modal__btnWrapper {
   font-size: 16px;
 }
 
-.c-modal__footer .change-btn {
+.p-modal__btnWrapper .change-btn {
   color: #4e90af;
   background-color: #e0f5ff;
   height: 500px;
@@ -31,21 +31,21 @@ layout
   cursor: pointer;
 }
 
-.c-modal__footer .change-btn.next-btn {
+.p-modal__btnWrapper .change-btn.next-btn {
   float: right;
 }
 
-.c-modal__footer .change-btn.prev-btn {
+.p-modal__btnWrapper .change-btn.prev-btn {
   display: none;
   float: left;
 }
 
-.c-modal__footer .change-btn.regi-btn {
+.p-modal__btnWrapper .change-btn.regi-btn {
   display: none;
   float: right;
 }
 
-.c-modal__footer .change-btn .icon {
+.p-modal__btnWrapper .change-btn .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +63,7 @@ layout
   padding: 0 5px;
 }
 
-.c-modal__footer .alter-btn {
+.p-modal__btnWrapper .alter-btn {
   display: none;
   color: #4e90af;
   float: right;
@@ -73,7 +73,7 @@ layout
   cursor: pointer;
 }
 
-.c-modal__footer .icon {
+.p-modal__btnWrapper .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
