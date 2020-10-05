@@ -11,11 +11,11 @@ layout
   border: 1px solid #55acee;
 }
 
-.l-header01 .l-headerWrapper .l-headerWrapper-left {
+.l-header01 .l-headerWrapper .l-headerWrapper__left {
   float: left;
 }
 
-.l-header01 .l-headerWrapper .l-headerWrapper-right {
+.l-header01 .l-headerWrapper .l-headerWrapper__right {
   float: right;
 }
 
@@ -218,37 +218,9 @@ layout
 /*---------------
 object/component
 -----------------*/
-.p-logo__image-PC {
-  border: 3px solid #55acee;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  position: fixed;
-  top: 9px;
-  left: 80px;
-}
-
-.p-logo__image {
-  border: 3px solid #55acee;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  position: fixed;
-  left: 8%;
-}
-
-.c-login {
-  line-height: 65px;
-  padding: 0 25px;
-  color: black;
-  cursor: pointer;
-  display: block;
-}
-
 /*------------------------------
-_join-main.scss
+join_c-welcomeWrapper
 ------------------------------*/
-/*component-------------------*/
 .c-welcomeWrapper {
   display: none;
   position: fixed;
@@ -271,6 +243,9 @@ _join-main.scss
   text-align: center;
 }
 
+/*-------------------------
+join_header.php
+---------------------------*/
 .p-logo__image-PC {
   border: 3px solid #55acee;
   width: 160px;
@@ -290,90 +265,11 @@ _join-main.scss
   left: 8%;
 }
 
-.c-login {
+.p-login {
   line-height: 65px;
   padding: 0 25px;
   color: black;
   cursor: pointer;
   display: block;
-}
-
-/*------------------------------
-_join-main.scss
-------------------------------*/
-/*component-------------------*/
-.c-welcomeWrapper {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-}
-
-.c-modalWrapper {
-  position: relative;
-  top: 25%;
-  background-color: #e6ecf0;
-  border-radius: 10px;
-  width: 450px;
-  height: 500px;
-  margin: auto;
-  text-align: center;
-}
-
-.p-logo__image-PC {
-  border: 3px solid #55acee;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  position: fixed;
-  top: 9px;
-  left: 80px;
-}
-
-.p-logo__image {
-  border: 3px solid #55acee;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  position: fixed;
-  left: 8%;
-}
-
-.c-login {
-  line-height: 65px;
-  padding: 0 25px;
-  color: black;
-  cursor: pointer;
-  display: block;
-}
-
-/*------------------------------
-_join-main.scss
-------------------------------*/
-/*component-------------------*/
-.c-welcomeWrapper {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-}
-
-.c-modalWrapper {
-  position: relative;
-  top: 25%;
-  background-color: #e6ecf0;
-  border-radius: 10px;
-  width: 450px;
-  height: 500px;
-  margin: auto;
-  text-align: center;
 }
 /*# sourceMappingURL=stylesheet.css.map */

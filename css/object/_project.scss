@@ -1,0 +1,32 @@
+/*-------------------------
+join_header.php
+---------------------------*/
+.p-logo__image-PC{
+  border:3px solid $test-color;
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  position:fixed;
+  top:9px;
+  left:80px;
+}
+
+.p-logo__image{
+  border:3px solid $test-color;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  position:fixed;
+  left:8%;
+}
+
+
+  .p-login{
+    line-height: 65px;
+    padding: 0 25px;
+    color: black;
+    cursor: pointer;
+    display: block;
+  }
+
+  

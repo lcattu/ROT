@@ -12,7 +12,7 @@
 <body>
  <header class="l-header01">
     <div class="l-headerWrapper">
-      <div class="l-headerWrapper-left">
+      <div class="l-headerWrapper__left">
         <img src="../image/ROT_logo.jpg" alt="" class="d-none d-lg-block  p-logo__image-PC">
 
 
@@ -20,8 +20,8 @@
       </div>
 
     
-      <div class="l-headerWrapper-right">
-        <div class="c-login">
+      <div class="l-headerWrapper__right">
+        <div class="p-login">
           <a>ログイン</a>
         </div>
       </div>
