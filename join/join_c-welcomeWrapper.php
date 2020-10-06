@@ -1,13 +1,13 @@
 <div class="c-welcomeWrapper">
     <!--#0 p-greetingModal -->
     <div class="c-modalWrapper">
-      <!-- change-btn-wrapper -->
-      <div class="p-closeBtn">
-        <i class="fa fa-2x fa-times"></i>
-      </div>
 
       <div class="p-modal__btnWrapper">
-        <div class="change-btn prev-btn">
+        <div class="p-closeBtn">
+          <i class="fa fa-2x fa-times"></i>
+        </div>
+
+        <div class="p-change-btn  p-prev-btn">
           <div class="p-modal__turnIcon">
             <i class ="fa fa-chevron-left fa-2x"></i>
             <p>prev</p>
@@ -15,7 +15,7 @@
         </div>
 
         
-        <div class="change-btn next-btn " >
+        <div class="p-change-btn p-next-btn " >
           <div class="p-modal__turnIcon">
             <i class="fa fa-chevron-right fa-2x"></i>
             <p>next</p>
@@ -23,7 +23,7 @@
           
         </div>
 
-        <div class="alter-btn ">
+        <div class="p-alter-btn ">
           <div class="p-modal__turnIcon">
             <i class="fa fa-chevron-right fa-2x"></i>
             next

@@ -15,9 +15,9 @@ $(function(){
     console.log('push1');
     $('.c-welcomeWrapper').fadeIn();
     $('.c-modal__body').eq(0).addClass('active');
-    $('.prev-btn').hide();
-    $('.alter-btn').hide();
-    $('.next-btn').show();
+    $('.p-prev-btn').hide();
+    $('.p-alter-btn').hide();
+    $('.p-next-btn').show();
 
   });
 
@@ -34,7 +34,7 @@ $(function(){
   })
 
   //  
-  $('.change-btn').click(function() {
+  $('.p-change-btn').click(function() {
     var $displaySlide = $('.active');
     //  ① 変数$displaySlideに'.active'クラスを代入
 
@@ -46,7 +46,7 @@ $(function(){
     */
 
     //  ③条件分岐
-    if ($(this).hasClass('next-btn')) {
+    if ($(this).hasClass('p-next-btn')) {
         //  1) このClickが行われた際にhasClassﾒｿｯﾄﾞで'next-btn'ｸﾗｽがあるか否かで条件分岐
 
         $displaySlide.next().addClass('active');
@@ -67,23 +67,23 @@ $(function(){
     //  ④ 変数slideIndexに 「.c-modal__body」の中の「.active」要素のインデックス番号を代入
 
 
-    $('.change-btn').show();
+    $('.p-change-btn').show();
 
     //  ボタン表示・非表示に関するプログラム
     //  ⑤ ④の変数の宣言で得たインデックス番号による条件分岐
     if(slideIndex == 0){
 
-      $('.prev-btn').hide();
+      $('.p-prev-btn').hide();
 
 
-      $('.alter-btn').hide();
+      $('.p-alter-btn').hide();
     
 
     }else if(slideIndex == 1){
 
 
-      $('.next-btn').hide();
-      $('.alter-btn').show();
+      $('.p-next-btn').hide();
+      $('.p-alter-btn').show();
 
       /** -----------------------
        * チェックボックスにﾁｪｯｸがあるか否かの確認 
@@ -91,13 +91,13 @@ $(function(){
 
       $('#check').click(function(){
         if($('#check').prop('checked')){
-          $('.next-btn').show();
-          $('.alter-btn').hide();
+          $('.p-next-btn').show();
+          $('.p-alter-btn').hide();
 
           console.log('OK');
         }else{
-          $('.next-btn').hide();
-          $('.alter-btn').show();
+          $('.p-next-btn').hide();
+          $('.p-alter-btn').show();
           console.log('NO');
         }
       });
@@ -105,7 +105,7 @@ $(function(){
     
     }else if(slideIndex == 2){
 
-      $('.next-btn').hide();
+      $('.p-next-btn').hide();
 
       $('.regi-btn').show();
 
@@ -130,9 +130,9 @@ $(function(){
      *ボタン表示の修正 
      */
       console.log('join/check.php『戻るボタン』がクリックされました');
-      $('.prev-btn').show();
-      $('.alter-btn').hide();
-      $('.next-btn').hide();
+      $('.p-prev-btn').show();
+      $('.p-alter-btn').hide();
+      $('.p-next-btn').hide();
 
     }
 
@@ -162,9 +162,9 @@ $(function(){
     if($('.c-modal__body').eq(2).addClass('active')){
       console.log('find error#2');
 
-      $('.prev-btn').show();
-      $('.alter-btn').hide();
-      $('.next-btn').hide();
+      $('.p-prev-btn').show();
+      $('.p-alter-btn').hide();
+      $('.p-next-btn').hide();
     }
     
   }
