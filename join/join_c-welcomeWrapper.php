@@ -8,16 +8,15 @@
 
       <div class="p-modal__btnWrapper">
         <div class="change-btn prev-btn">
-          <div class="icon">
+          <div class="p-modal__turnIcon">
             <i class ="fa fa-chevron-left fa-2x"></i>
             <p>prev</p>
           </div>
-          
         </div>
 
         
         <div class="change-btn next-btn " >
-          <div class="icon">
+          <div class="p-modal__turnIcon">
             <i class="fa fa-chevron-right fa-2x"></i>
             <p>next</p>
           </div>
@@ -25,9 +24,8 @@
         </div>
 
         <div class="alter-btn ">
-          <div class="icon">
+          <div class="p-modal__turnIcon">
             <i class="fa fa-chevron-right fa-2x"></i>
-            <br>
             next
           </div>
           
