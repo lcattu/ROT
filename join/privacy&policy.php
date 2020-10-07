@@ -1,4 +1,4 @@
-<div class="txtArea-text">
+<div class="p-modal__txtArea--text">
   <h4>はじめに</h4>
   <p>ROT(以下、「本サイト」といいます。)の個人情報取扱指針は以下の条文は以下の条文に規定します。
   </p>

@@ -1,55 +1,5 @@
 
 
-.c-modal__body{
-  padding:5px 40.188px;
-  height:100px;
-  display:none;
-  &.active{
-    display:block;
-  }
-.c-modal__title{
-  text-align: center;
-  margin:35px 5px 20px 5px;
-  height:30px
-  }
-  .c-modal__txtArea{
-    margin:auto;
-    border-radius:5px;
-    background-color:white;
-    height:320px;
-    width:315px;
-    overflow: scroll;
-    .txtArea-text{
-      padding:5px 20px 20px 20px;
-      h3{
-        font-size:25px;
-      }
-      h4{
-        padding-top:20px;
-        font-size: 20px;
-        text-align:left;
-      }
-      p{
-        text-align: left;
-        margin-bottom:3px;
-      }
-      ol{
-        margin-bottom:0px;
-        padding-left:30px;
-        li{
-          text-align:left;
-
-        }
-      }
-      
-    }
-
-  }
-  .c-modal__checkBtn{
-    margin-top:20px;
-
-  }
-}
 
 
   

@@ -45,3 +45,14 @@ z-index: 100;
  }
 }
   
+/*--------------------------------------
+join_c-modal__body
+---------------------------------------*/
+.c-modal__body{
+  padding:5px 40.188px;
+  height:100px;
+  display:none;
+  &.active{
+    display:block;
+  }
+}

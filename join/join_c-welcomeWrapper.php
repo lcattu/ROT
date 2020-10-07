@@ -34,28 +34,27 @@
 
 
       <!-- #0 -->
-      
-      <div class=" c-modal__body">
+      <div class=" c-modal__body p-modal__body">
 
-        <h3 class="c-modal__title">#0 Greeting</h3>
+        <h3 class="p-modal__body--title">#0 Greeting</h3>
         <p>はじめまして。カツノリです<br>Twitter風webアプリ完成しました。よろしかったら、遊んでみてください。</p> 
       </div>
     
       <!-- #1 -->
-      <div class="c-modal__body">
-        <h4 class="c-modal__title">個人情報取扱指針</h3>
-          <div class="c-modal__txtArea">
+      <div class="c-modal__body p-modal__body">
+        <h3 class="p-modal__body--title">個人情報取扱指針</h3>
+          <div class="p-modal__body--txtArea">
           
             <?php include('privacy&policy.php'); ?>
           </div>
-          <div class = c-modal__checkBtn>
+          <div class = p-modal__body--checkBtn>
             <input id="check" type="checkbox" >上記に同意する
           </div>
       </div>
 
       <!-- #2 -->
-      <div class="c-modal__body ">
-        <h3 class="c-modal__title">#2 登録画面</h3>
+      <div class="c-modal__body  p-modal__body">
+        <h3 class="p-modal__body--title">#2 登録画面</h3>
         <p>登録ボタンを追加していく</p> 
         <form action="" method="post" enctype="multipart/form-data">
           <dl>

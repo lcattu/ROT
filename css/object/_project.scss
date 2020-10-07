@@ -67,9 +67,9 @@ join_body
   cursor:pointer;
 }
 
-/*---------------------------
+/*
 p-modal__btnWrapper
-----------------------------*/
+*/
 .p-modal__btnWrapper{
   font-size:16px;
 
@@ -113,5 +113,53 @@ p-modal__btnWrapper
     align-items:center;
     flex-direction:column;
     padding:0 5px;
+  }
+}
+
+
+/*
+p-modal
+*/
+.p-modal__body{
+  &--title{
+    text-align: center;
+    margin:35px 5px 20px 5px;
+    height:30px
+  }
+  &--txtArea{
+    margin:auto;
+    border-radius:5px;
+    background-color:white;
+    height:320px;
+    width:315px;
+    overflow: scroll;
+    &--text{
+      padding:5px 20px 20px 20px;
+      h3{
+        font-size:25px;
+      }
+      h4{
+        padding-top:20px;
+        font-size: 20px;
+        text-align:left;
+      }
+      p{
+        text-align: left;
+        margin-bottom:3px;
+      }
+      ol{
+        margin-bottom:0px;
+        padding-left:30px;
+        li{
+          text-align:left;
+  
+        }
+      }
+      
+    }
+  
+  }
+  &--checkBtn{
+    margin-top:20px;
   }
 }

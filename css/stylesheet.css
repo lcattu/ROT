@@ -19,63 +19,6 @@ layout
   float: right;
 }
 
-.c-modal__body {
-  padding: 5px 40.188px;
-  height: 100px;
-  display: none;
-}
-
-.c-modal__body.active {
-  display: block;
-}
-
-.c-modal__body .c-modal__title {
-  text-align: center;
-  margin: 35px 5px 20px 5px;
-  height: 30px;
-}
-
-.c-modal__body .c-modal__txtArea {
-  margin: auto;
-  border-radius: 5px;
-  background-color: white;
-  height: 320px;
-  width: 315px;
-  overflow: scroll;
-}
-
-.c-modal__body .c-modal__txtArea .txtArea-text {
-  padding: 5px 20px 20px 20px;
-}
-
-.c-modal__body .c-modal__txtArea .txtArea-text h3 {
-  font-size: 25px;
-}
-
-.c-modal__body .c-modal__txtArea .txtArea-text h4 {
-  padding-top: 20px;
-  font-size: 20px;
-  text-align: left;
-}
-
-.c-modal__body .c-modal__txtArea .txtArea-text p {
-  text-align: left;
-  margin-bottom: 3px;
-}
-
-.c-modal__body .c-modal__txtArea .txtArea-text ol {
-  margin-bottom: 0px;
-  padding-left: 30px;
-}
-
-.c-modal__body .c-modal__txtArea .txtArea-text ol li {
-  text-align: left;
-}
-
-.c-modal__body .c-modal__checkBtn {
-  margin-top: 20px;
-}
-
 /*---------------
 object/component
 -----------------*/
@@ -125,6 +68,19 @@ join_c-loginWrapper
 }
 
 .c-loginWrapper .c-modal__regiBody.active {
+  display: block;
+}
+
+/*--------------------------------------
+join_c-modal__body
+---------------------------------------*/
+.c-modal__body {
+  padding: 5px 40.188px;
+  height: 100px;
+  display: none;
+}
+
+.c-modal__body.active {
   display: block;
 }
 
@@ -197,9 +153,9 @@ join_body
   cursor: pointer;
 }
 
-/*---------------------------
+/*
 p-modal__btnWrapper
-----------------------------*/
+*/
 .p-modal__btnWrapper {
   font-size: 16px;
 }
@@ -265,5 +221,55 @@ p-modal__btnWrapper
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 5px;
+}
+
+/*
+p-modal
+*/
+.p-modal__body--title {
+  text-align: center;
+  margin: 35px 5px 20px 5px;
+  height: 30px;
+}
+
+.p-modal__body--txtArea {
+  margin: auto;
+  border-radius: 5px;
+  background-color: white;
+  height: 320px;
+  width: 315px;
+  overflow: scroll;
+}
+
+.p-modal__body--txtArea--text {
+  padding: 5px 20px 20px 20px;
+}
+
+.p-modal__body--txtArea--text h3 {
+  font-size: 25px;
+}
+
+.p-modal__body--txtArea--text h4 {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.p-modal__body--txtArea--text p {
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.p-modal__body--txtArea--text ol {
+  margin-bottom: 0px;
+  padding-left: 30px;
+}
+
+.p-modal__body--txtArea--text ol li {
+  text-align: left;
+}
+
+.p-modal__body--checkBtn {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=stylesheet.css.map */
