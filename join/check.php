@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-require('../dbconnect.php');
+require('../function.php');
 
 if(!isset($_SESSION['join'])){
   //  joinにセッションがissetされてない場合
@@ -12,6 +12,10 @@ if(!isset($_SESSION['join'])){
   //  例えばURLを直接入力し、check.phpにアクセスした場合
   //  $_SESSSIONに情報がない状態なので強制的に、index.phpにもどす処理
   exit();
+}
+
+if(isset($_SESSION['join'])){
+  echo 'joinにデータありますよ！！';
 }
 
 if(!empty($_POST)){
@@ -30,7 +34,6 @@ if(!empty($_POST)){
 }
 
 
-
 ?>
 
 
@@ -43,42 +46,38 @@ if(!empty($_POST)){
   <h1>Replication of Twitter</h1>
 
 
-  <div class=" p-welcomeWrapper">
-    <div class="c-modal">
+  <div class=" c-welcomeWrapper" style="display:block;">
+    <div class="c-modalWrapper" >
+      <div class="c-modal__body p-modal__body active">
+        <h3 class="p-modal__body--title">#3 確認画面</h3>
+        <form action="" method="post" >
 
-      
-      <div class="c-welcomeWrapper">
-      <div class="c-modal__body active">
-            <h3 class="mt-5 c-modal__title">#3 確認画面</h3>
-            <p>登録ボタンを追加していく</p> 
-            <form action="" method="post" >
+          <input type="hidden" name="action" value="submit" />
+          <dl class="">
+            <dt>ニックネーム</dt>
+            <dd>
+              <?php echo(htmlspecialchars($_SESSION['join']['name'],ENT_QUOTES)); ?>
+            </dd>
 
-              <input type="hidden" name="action" value="submit" />
-              <dl class="mt-5">
-                <dt>ニックネーム</dt>
-                <dd>
-                  <?php echo(htmlspecialchars($_SESSION['join']['name'],ENT_QUOTES)); ?>
-                </dd>
+            <dt>メールアドレス</dt>
+            <dd>
+              <?php echo(htmlspecialchars($_SESSION['join']['email'],ENT_QUOTES)); ?>
 
-                <dt>メールアドレス</dt>
-                <dd>
-                  <?php echo(htmlspecialchars($_SESSION['join']['email'],ENT_QUOTES)); ?>
+            </dd>
 
-                </dd>
+            <dt>パスワード</dt>
+            <dd>
+              【表示されません】
+            </dd>
+          </dl>
 
-                <dt>パスワード</dt>
-                <dd>
-                  【表示されません】
-                </dd>
-              </dl>
-
-              <div>
-                <a href="index.php?action=rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
-                
-              </div>
-            </form>
-
+          <div>
+            <a href="index.php?action==rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
+            
           </div>
+        </form>
+
+          
       </div>  
     </div>
           

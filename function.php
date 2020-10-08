@@ -70,14 +70,7 @@ if(!empty($_POST)){
 
 
 
-if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
-  //  check.phpから『書き直す』をクリックした際
-  //  URLﾊﾟﾗﾒｰﾀｰにrewriteがついていた場合
 
-  $_POST = $_SESSION['join'];
-
-
-}
 /*------------------------
  DB接続
 -------------------------*/

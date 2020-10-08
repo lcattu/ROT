@@ -118,14 +118,19 @@ $(function(){
    * check.phpの”書き直し”を押されたときの挙動
   --------------------------------------------*/
 
-  var URL = 'http://localhost:8888/rot/join/index.php?action=rewrite';
-
+  
 
   $(window).on('load',function(){
-    if(location.href == "http://localhost:8888/rot/join/index.php?action=rewrite"){
+    if(location.href == "http://localhost:8888/rot/join/index.php?action==rewrite"){
       $('.c-modal__body').removeClass('active');
-      console.log('');
+      console.log('==rewriteなのでアクティブクラス外しました');
+      $('.c-welcomeWrapper').fadeIn(0);
+      console.log('c-welcomeWrapperをアクティブにしました');
+      
       $('.c-modal__body').eq(2).addClass('active');
+      
+      
+
       /**
      *ボタン表示の修正 
      */
@@ -151,21 +156,32 @@ $(function(){
 
 
     $('.error').css({"color":"red"});
-    $('.c-modal__body').removeClass('active');
-    $('.c-modal__body').eq(2).addClass('active');
+    $('.c-modal__body').eq(0).removeClass('active');
+    console.log('アクティブを取り除きました');
 
+    $('.c-welcomeWrapper').fadeIn(0);
+    console.log('c-welcomeWrapperをアクティブにしました');
+    /**
+     * c-welcomeWrapperでdisplay:none;を設定し、addClassメソッドを使用しactiveクラスを付け
+     * 足そうと考えていた
+     * しかし、activeクラスはつくものの、display:none;が消えず、activeにならなかったので
+     * fadeInメソッドでaddClassの代用をすることとした
+     */
+
+    $('.c-modal__body').eq(2).addClass('active');
+    console.log('c-modal__bodyをアクティブにしました');
 
     /**
      *ボタン表示の修正 
      */
     
-    if($('.c-modal__body').eq(2).addClass('active')){
+      if($('.c-modal__body').eq(2).addClass('active')){
       console.log('find error#2');
 
       $('.p-prev-btn').show();
       $('.p-alter-btn').hide();
       $('.p-next-btn').hide();
-    }
+      }
     
   }
 

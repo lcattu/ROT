@@ -2,7 +2,6 @@
 join_c-welcomeWrapper
 ------------------------------*/
 .c-welcomeWrapper{
-  display:none;
   position: fixed;
   top: 0;
   right: 0; 
@@ -21,6 +20,9 @@ join_c-welcomeWrapper
   height: 500px;
   margin:auto;
   text-align: center;
+  &.active{
+    display:block;
+  }
 }
 
 /*--------------------------------
@@ -56,3 +58,4 @@ join_c-modal__body
     display:block;
   }
 }
+

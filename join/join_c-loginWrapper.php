@@ -1,3 +1,10 @@
+<?php  
+session_start();
+
+require('../function.php');
+?>
+
+
 <div class="c-loginWrapper">
   <div class="c-modalWrapper">
     <div class="c-modal__regiBody">
