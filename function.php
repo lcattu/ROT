@@ -4,7 +4,12 @@
  バリデーションチェック
 ------------------------------*/
 
-
+// 未入力チェック
+function validateRequired ($value, $key){
+  if($value===''){
+    $error[$key]='blank';
+  }
+}
 
 /**
  * 入力チェック

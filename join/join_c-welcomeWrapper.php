@@ -2,6 +2,23 @@
 session_start();
 
 require('../function.php');
+
+
+if(!empty($_POST)){
+
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $certify_password = $_POST['certify_password'];
+
+  // 未入力チェック
+  validateRequired($name, 'name');
+  validateRequired($email, 'email');
+  validateRequired($password, 'password');
+  validateRequired($certify_password, 'certify_password');
+
+}
+
 ?>
 
 <div class="c-welcomeWrapper">
