@@ -5,11 +5,14 @@
 ------------------------------*/
 
 // 未入力チェック
-function validateRequired ($value, $key){
+function validatehoge($value, $key){
+  
   if($value===''){
     $error[$key]='blank';
   }
+  
 }
+
 
 /**
  * 入力チェック
@@ -66,8 +69,6 @@ if(!empty($_POST)){
     header('Location:check.php');
   }
 
-
-  
 
 }
 
