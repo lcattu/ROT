@@ -18,7 +18,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   <?php require "join_header.php"; ?>
 
   <h1>Replication of Twitter</h1>
-
+  <!-- テスト -->
   <div class="p-startBtn">
   <a>登録</a>
   </div>
