@@ -5,7 +5,7 @@
 ------------------------------*/
 
 // 未入力チェック
-function validatehoge($value, $key){
+function validateRequired($value, $key){
   
   if($value===''){
     $error[$key]='blank';
@@ -14,10 +14,15 @@ function validatehoge($value, $key){
 }
 
 
+
+
+
+
+
 /**
  * 入力チェック
 */
-
+/*
 if(!empty($_POST)){
   // 「空でない=!empty」
   //  $_POSTが空でないことを確認し、ﾌｫｰﾑが送信されたことを確認
@@ -71,7 +76,7 @@ if(!empty($_POST)){
 
 
 }
-
+*/  
 
 
 

@@ -17,7 +17,10 @@ if(!empty($_POST)){
   validateRequired($password, 'password');
   validateRequired($certify_password, 'certify_password');
   
+
 }
+
+
 
 ?>
 
@@ -101,8 +104,8 @@ if(!empty($_POST)){
               参考URL(https://www.leon-tec.co.jp/blog/yoshida/8214/)
             -->
 
-            <?php if($error['name'] =='blank'):?>
-            <p class ="error">ニックネームを入力してください</p>
+            <?php if($error['name']='blank'):?>
+              <p class ="error">ニックネームを入力してください</p>
             <?php endif; ?>
 
 
@@ -114,7 +117,7 @@ if(!empty($_POST)){
             value="<?php print(htmlspecialchars($_POST['email'],ENT_QUOTES)); ?>"
             >
 
-            <?php if($error['email']==='blank'):?>
+            <?php if($error['email']='blank'):?>
               <p class ="error">メールアドレスを入力してください</p>
             <?php endif; ?>
 
@@ -128,7 +131,7 @@ if(!empty($_POST)){
           <dd>
             <input type="password" name="password"  size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'],ENT_QUOTES)); ?>">
 
-            <?php if($error['password']==='blank'):?>
+            <?php if($error['password']='blank'):?>
             <p class ="error">パスワードを入力してください</p>
             <?php endif; ?>
             <?php if($error['password']==='length'):?>
@@ -144,7 +147,7 @@ if(!empty($_POST)){
             <?php print(htmlspecialchars($_POST['certify_password'], ENT_QUOTES)); ?>
             ">
           </dd>
-          <?php if($error['certify_password'] ==='blank'): ?>
+          <?php if($error['certify_password'] ='blank'): ?>
             <p class ="error">確認パスワードを入力してください</p>
           <?php endif; ?>
 
