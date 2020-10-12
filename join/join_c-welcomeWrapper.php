@@ -1,7 +1,6 @@
 <?php  
 session_start();
 
-require('../function.php');
 
 
 if(!empty($_POST)){
@@ -12,11 +11,12 @@ if(!empty($_POST)){
   $certify_password = $_POST['certify_password'];
 
   // 未入力チェック
+  
   validateRequired($name, 'name');
   validateRequired($email, 'email');
   validateRequired($password, 'password');
   validateRequired($certify_password, 'certify_password');
-
+  
 }
 
 ?>
