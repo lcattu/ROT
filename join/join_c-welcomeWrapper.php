@@ -1,6 +1,6 @@
 <?php  
 session_start();
-
+// PHPを実行した後でも、セットした情報を覚えている特性をもつ
 
 
 if(!empty($_POST)){
@@ -10,17 +10,36 @@ if(!empty($_POST)){
   $password = $_POST['password'];
   $certify_password = $_POST['certify_password'];
 
-  // 未入力チェック
   
+
+  //  文字数チェック
+   // 最大値チェック
+  validateMaxLen($name, 'name');
+
+    // 最小値チェック
+  validateMinLen($name, 'name');
+
+  //  email形式チェック
+  validateMailCheck($email, 'email');
+
+  //  PW文字数チェック
+  validatePwLength($password, 'password');
+
+  // 未入力チェック
   validateRequired($name, 'name');
   validateRequired($email, 'email');
   validateRequired($password, 'password');
   validateRequired($certify_password, 'certify_password');
-  
-
 }
 
 
+
+echo '$keyの中身//<br>';
+var_dump($key);
+echo '<br>';
+
+echo '$error[$key]の中身//<br>';
+var_dump($error[$key]);
 
 ?>
 
@@ -77,7 +96,7 @@ if(!empty($_POST)){
           <input id="check" type="checkbox" >上記に同意する
         </div>
     </div>
-
+<!-- △△△△△△△△ -->
     <!-- #2 -->
     <div class="c-modal__body  p-modal__body">
       <h3 class="p-modal__body--title">#2 登録画面</h3>
@@ -86,9 +105,9 @@ if(!empty($_POST)){
         <dl>
           <dt>ニックネーム</dt>
           <dd>
-            <input type="text" name="name" size="35" maxlength="255" value="<?php print(htmlspecialchars($_POST['name'],ENT_QUOTES)); ?>"
+            <input type="text" name="name" size="35" maxlength="255" value="<?php print$_POST['name']; ?>"
             >
-            <!-- 
+<!-- 
             ♦htmlspecialcharsﾌｧﾝｸｼｮﾝ
               htmlspecialcharsﾌｧﾝｸｼｮﾝを使うことで、HTMLﾀｸﾞの効果を打ち消して、イタズラのようなコードを無効化する
 
@@ -102,13 +121,27 @@ if(!empty($_POST)){
               以上に変換される
 
               参考URL(https://www.leon-tec.co.jp/blog/yoshida/8214/)
-            -->
+--> 
 
-            <?php if($error['name']='blank'):?>
+            <?php echo '<br>'; ?>
+            <?php var_dump($blank); ?>
+            <?php echo '<br>'; ?>
+
+            <!-- ニックネーム入力に関するエラー文 -->
+            <?php if($error['name']==='blank'):?>
               <p class ="error">ニックネームを入力してください</p>
+            <?php endif; ?>
+            <?php if($error['name']==='max'):?>
+              <p class ="error">文字長すぎです</p>
+            <?php endif; ?>
+            <?php if($error['name']==='min'):?>
+              <p class ="error">文字短すぎです</p>
             <?php endif; ?>
 
 
+            <?php var_dump ($error['name']);  ?>
+
+            
           </dd>
 
           <dt>メールアドレス</dt>
@@ -116,8 +149,9 @@ if(!empty($_POST)){
             <input type="text" name="email" size="35" maxlength="255"
             value="<?php print(htmlspecialchars($_POST['email'],ENT_QUOTES)); ?>"
             >
-
-            <?php if($error['email']='blank'):?>
+            
+            <!-- ニックネーム入力に関するエラー文 -->
+            <?php if($error['email']==='blank'):?>
               <p class ="error">メールアドレスを入力してください</p>
             <?php endif; ?>
 
@@ -131,9 +165,10 @@ if(!empty($_POST)){
           <dd>
             <input type="password" name="password"  size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'],ENT_QUOTES)); ?>">
 
-            <?php if($error['password']='blank'):?>
+            <?php if($error['password']==='blank'):?>
             <p class ="error">パスワードを入力してください</p>
             <?php endif; ?>
+
             <?php if($error['password']==='length'):?>
             <p class ="error">パスワードは4文字以上で入力してください</p>
             <?php endif; ?>
@@ -147,7 +182,7 @@ if(!empty($_POST)){
             <?php print(htmlspecialchars($_POST['certify_password'], ENT_QUOTES)); ?>
             ">
           </dd>
-          <?php if($error['certify_password'] ='blank'): ?>
+          <?php if($error['certify_password'] ==='blank'): ?>
             <p class ="error">確認パスワードを入力してください</p>
           <?php endif; ?>
 
@@ -161,6 +196,8 @@ if(!empty($_POST)){
             
 
         </dl>
+<!-- △△△△△△△△ -->
+
         <div>
           <input type="submit" value="入力内容を確認する" class="input-btn">
         </div>

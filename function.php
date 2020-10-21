@@ -1,4 +1,8 @@
 <?php
+/*----------------------------
+ グローバル変数
+------------------------------*/
+$error = array();
 
 /*----------------------------
  バリデーションチェック
@@ -6,16 +10,48 @@
 
 // 未入力チェック
 function validateRequired($value, $key){
-  
   if($value===''){
-    $error[$key]='blank';
+    
+    global $error;
+    $error[$key] ='blank';
+    var_dump($error);
   }
-  
 }
 
+//  最大文字数チェック
+function validateMaxLen($value, $key, $max=200){
+  //  
+  $value = str_replace("\r\n","", $value);
+  if(mb_strlen($value) > $max){
+    global $error;
+    $error[$key] = 'max';
+  }
+}
 
+// 最小文字数チェック
+function validateMinLen($value, $key, $min=2){
+ if(mb_strlen($value) < $min){
+  global $error;
+  $error[$key] = 'min';
+ }
+}
 
+//  email形式チェック
+function validateMailCheck($value, $key){
+  if(filter_var($value, FILTER_VALIDATE_EMAIL)){
+  }else{
+    global $error;
+    $error[$key]='check';
+  }
+}
 
+//  PWチェック
+function validatePwLength($value, $key){
+  if(strlen($value)<4){
+    global $error;
+    $error[$key]='length';
+  }
+}
 
 
 
@@ -28,41 +64,10 @@ if(!empty($_POST)){
   //  $_POSTが空でないことを確認し、ﾌｫｰﾑが送信されたことを確認
   //  例えば何も記述されていない状態で再読み込みされた場合にエラーメッセージを出力しないようにする
 
-  if($_POST['name']===''){
-    //  print('名前が入力されていません');
-    
-    $error['name']='blank';
-    //  $errorという配列の'name'キーに対し'blank'という値を代入
-	}
 
+	
 
-
-	if($_POST['email']===''){
-		//print('名前が入力されていません');
-		$error['email']='blank';
-  }
-
-  if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-  }else{
-    $error['email']='check';
-  }
-
-	if(strlen($_POST['password'])<4){
-    //「strlen」ファンクションで確認し、4文字以下である場合は「length」というエラーとして記録
-
-		//print('名前が入力されていません');
-		$error['password']='length';
-  }
   
-  if($_POST['password']===''){
-    $error['password']='blank';
-  }
-
-
-  if($_POST['certify_password'] === ''){
-    $error['certify_password'] = 'blank';
-  }
-
   
 
   if(empty($error)){
