@@ -178,21 +178,17 @@ var_dump($error[$key]);
 
           <dt>パスワード(確認)</dt>
           <dd>
-            <input type="password" name="certify_password"  size="10" maxlength="20" value="
-            <?php print(htmlspecialchars($_POST['certify_password'], ENT_QUOTES)); ?>
-            ">
+            <input type="password" name="certify_password" size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['certify_password'],ENT_QUOTES)); ?>">
+          
+
           </dd>
           <?php if($error['certify_password'] ==='blank'): ?>
-            <p class ="error">確認パスワードを入力してください</p>
-          <?php endif; ?>
+              <p class ="error">確認パスワードを入力してください</p>
+            <?php endif; ?>
 
-          <?php if($_POST['certify_password'] !== $_POST['password']): ?>
-          <?php $error['certify_password'] = 'check' ?>
-          
-            <p class ="error">パスワードと確認パスワードが一致しません</p>
-          <?php endif;?>
-
-          
+            <?php if($_POST['certify_password'] !== $_POST['password']): ?>
+              <p class ="error">パスワードと確認パスワードが一致しません</p>
+            <?php endif;?>
             
 
         </dl>
