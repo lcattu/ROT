@@ -17,16 +17,26 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   <!-- ヘッダー -->
   <?php require "join_header.php"; ?>
 
-  <h1>Replication of Twitter</h1>
+  <div class="container-sm">
+    <h1>Replication of Twitter</h1>
+
+    <div class="btn-btn-wrawrapper">
+      <div class="p-startBtn">
+        <a>登録</a>
+      </div>
+
+      <div class="p-loginBtn">
+        <a>ログイン</a>
+      </div>
+
+    </div>
+    
+
+    
   
-  <div class="p-startBtn">
-  <a>登録</a>
   </div>
 
-  <div class="p-loginBtn">
-  <a>ログイン</a>
-  </div>
-
+  
   <?php require'join_c-loginWrapper.php'?>
 
 
