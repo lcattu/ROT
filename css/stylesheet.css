@@ -47,6 +47,10 @@ join_c-welcomeWrapper
   text-align: center;
 }
 
+.c-modalWrapper.active {
+  display: block;
+}
+
 /*--------------------------------
 join_c-loginWrapper
 ----------------------------------*/
@@ -126,8 +130,6 @@ join_body
   background-color: #239b76;
   cursor: pointer;
   position: relative;
-  top: 300px;
-  left: 550px;
 }
 
 .p-loginBtn {
@@ -139,8 +141,6 @@ join_body
   background-color: #239b76;
   cursor: pointer;
   position: relative;
-  top: 300px;
-  left: 580px;
 }
 
 .p-closeBtn {
@@ -153,9 +153,9 @@ join_body
   cursor: pointer;
 }
 
-/*
+/*---------------------
 p-modal__btnWrapper
-*/
+-----------------------*/
 .p-modal__btnWrapper {
   font-size: 16px;
 }
@@ -223,9 +223,9 @@ p-modal__btnWrapper
   padding: 0 5px;
 }
 
-/*
-p-modal
-*/
+/*-----------------------
+p-modal__body
+-------------------------*/
 .p-modal__body--title {
   text-align: center;
   margin: 35px 5px 20px 5px;
