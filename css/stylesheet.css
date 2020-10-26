@@ -1,6 +1,14 @@
 /*---------------
 foundation
 -----------------*/
+html {
+  overflow: hidden;
+}
+
+div {
+  line-height: 100%;
+}
+
 /*---------------
 layout
 -----------------*/
@@ -26,29 +34,73 @@ object/component
 join_c-welcomeWrapper
 ------------------------------*/
 .c-welcomeWrapper {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
   display: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  white-space: nowrap;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
+  top: 0;
+  z-index: 9999999999999;
 }
 
-.c-modalWrapper {
-  position: relative;
-  top: 25%;
-  background-color: #e6ecf0;
-  border-radius: 10px;
-  width: 450px;
-  height: 500px;
-  margin: auto;
+.c-welcomeWrapper .c-modalWrapper {
+  width: 100%;
+  height: 100%;
   text-align: center;
+  white-space: nowrap;
+  padding: 20px;
+  overflow: auto;
 }
 
-.c-modalWrapper.active {
+.c-welcomeWrapper .c-modalWrapper.active {
+  display: inline-block;
+}
+
+.c-welcomeWrapper .c-modalWrapper .c-modalWrapper__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+
+.c-welcomeWrapper .c-modalWrapper .c-modalWrapper__box {
+  width: 100%;
+  max-width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.c-welcomeWrapper .c-modalWrapper .c-modalWrapper__box .c-modal__body {
+  background: #fff;
+  padding: 80px 20px;
+  white-space: normal;
+  text-align: left;
+  display: none;
+}
+
+.c-welcomeWrapper .c-modalWrapper .c-modalWrapper__box .c-modal__body.active {
   display: block;
+}
+
+.c-welcomeWrapper .c-modalWrapper .c-modalWrapper__box .c-modal__bodyform {
+  padding-bottom: 32px;
+}
+
+.c-welcomeWrapper .c-modalWrapper::before {
+  content: '';
+}
+
+.c-welcomeWrapper .c-modalWrapper::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0px;
+  height: 100%;
 }
 
 /*--------------------------------
@@ -56,36 +108,57 @@ join_c-loginWrapper
 ----------------------------------*/
 .c-loginWrapper {
   display: none;
+  width: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
+  z-index: 9999;
 }
 
-.c-loginWrapper .c-modal__regiBody {
-  padding: 5px 40.188px;
-  height: 100px;
-  display: none;
+.c-loginWrapper .c-modalWrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  white-space: nowrap;
 }
 
-.c-loginWrapper .c-modal__regiBody.active {
+.c-loginWrapper .c-modalWrapper .c-modalWrapper__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(51, 51, 51, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.c-loginWrapper .c-modalWrapper .c-modalWrapper__box {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background: #fff;
+}
+
+.c-loginWrapper .c-modalWrapper .c-modalWrapper__box .c-modal__regiBody {
+  padding: 80px 20px;
+  text-align: left;
+}
+
+.c-loginWrapper .c-modalWrapper .c-modalWrapper__box .c-modal__regiBody.active {
   display: block;
 }
 
-/*--------------------------------------
-join_c-modal__body
----------------------------------------*/
-.c-modal__body {
-  padding: 5px 40.188px;
-  height: 100px;
-  display: none;
-}
-
-.c-modal__body.active {
-  display: block;
+.c-loginWrapper .c-modalWrapper:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 100%;
 }
 
 /*-------------------------
@@ -147,8 +220,8 @@ join_body
   width: 40.188px;
   margin: 0px;
   position: absolute;
-  top: 0.5%;
-  left: 91%;
+  top: 3.5%;
+  left: 87%;
   z-index: 300;
   cursor: pointer;
 }
@@ -162,26 +235,29 @@ p-modal__btnWrapper
 
 .p-modal__btnWrapper .p-change-btn {
   color: #4e90af;
-  background-color: #e0f5ff;
-  height: 500px;
+  height: 75px;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .p-modal__btnWrapper .p-change-btn.p-next-btn {
-  float: right;
+  position: absolute;
+  bottom: -2%;
+  right: 12%;
 }
 
 .p-modal__btnWrapper .p-change-btn.p-prev-btn {
   display: none;
-  float: left;
+  position: absolute;
+  bottom: -2%;
+  left: 12%;
 }
 
 .p-modal__btnWrapper .p-change-btn .p-modal__turnIcon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
+  height: 75px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -198,10 +274,11 @@ p-modal__btnWrapper
 .p-modal__btnWrapper .p-alter-btn {
   display: none;
   color: #4e90af;
-  float: right;
+  position: absolute;
+  bottom: -2%;
+  right: 12%;
   border-radius: 10px;
-  height: 500px;
-  background-color: red;
+  height: 75px;
   cursor: pointer;
 }
 
@@ -209,7 +286,7 @@ p-modal__btnWrapper
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
+  height: 75px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -234,10 +311,11 @@ p-modal__body
 
 .p-modal__body--txtArea {
   margin: auto;
+  border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
   height: 320px;
-  width: 315px;
+  width: 290px;
   overflow: scroll;
 }
 
@@ -270,6 +348,12 @@ p-modal__body
 }
 
 .p-modal__body--checkBtn {
-  margin-top: 20px;
+  text-align: center;
+  margin: 25px 0px 5px 0px;
+}
+
+.p-modal__body form {
+  text-align: center;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=stylesheet.css.map */

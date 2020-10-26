@@ -59,8 +59,8 @@ join_body
   width:40.188px;
   margin:0px;
   position: absolute;
-  top:0.5%;
-  left:91%;
+  top:3.5%;
+  left:87%;
   z-index:300;
   cursor:pointer;
 }
@@ -73,20 +73,28 @@ p-modal__btnWrapper
 
   .p-change-btn{
     color: #4e90af;
-    background-color: #e0f5ff;
-    height:500px;
+    // background-color: #e0f5ff;
+    
+    height:75px;
     border-radius: 10px;
     cursor: pointer;
     &.p-next-btn{
-      float:right;
+      //float:right;
+      position: absolute;
+      bottom: -2%;
+      right: 12%;
     }
     &.p-prev-btn{
       display:none;
-      float:left;
+
+      // float:left;
+      position: absolute;
+      bottom:-2%;
+      left:12%;
     }
     .p-modal__turnIcon{
       display:flex;
-      height:500px;
+      height:75px;
       justify-content:center;
       align-items:center;
       flex-direction:column;
@@ -97,16 +105,19 @@ p-modal__btnWrapper
   .p-alter-btn{
     display:none;
     color: #4e90af;
-    float:right;
+    position: absolute;
+    bottom: -2%;
+    right: 12%;
+
     border-radius: 10px;
-    height:500px;
-    background-color: red;
+    height:75px;
+    // background-color: red;
     cursor: pointer;
   }
 
   .p-modal__turnIcon{
     display:flex;
-    height:500px;
+    height:75px;
     justify-content:center;
     align-items:center;
     flex-direction:column;
@@ -126,10 +137,12 @@ p-modal__body
   }
   &--txtArea{
     margin:auto;
+    border: 1px solid #ccc;
+
     border-radius:5px;
     background-color:white;
     height:320px;
-    width:315px;
+    width:290px;
     overflow: scroll;
     &--text{
       padding:5px 20px 20px 20px;
@@ -158,7 +171,13 @@ p-modal__body
   
   }
   &--checkBtn{
-    margin-top:20px;
+    text-align: center;
+    margin:25px 0px 5px 0px;
+  }
+  form{
+    text-align: center;
+    margin-bottom:30px;
+    
   }
 }
 
