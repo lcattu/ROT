@@ -2,34 +2,52 @@
 session_start();
 // PHPを実行した後でも、セットした情報を覚えている特性をもつ
 
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「　ユーザー登録ページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
 
-if(!empty($_POST)){
 
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+if(!empty($_POST['signup'])){
+
+  $name = $_POST['s_name'];
+  $email = $_POST['s_email'];
+  $password = $_POST['s_password'];
   $certify_password = $_POST['certify_password'];
 
   
-
   //  文字数チェック
    // 最大値チェック
-  validateMaxLen($name, 'name');
+  validateMaxLen($name, 's_name');
 
     // 最小値チェック
-  validateMinLen($name, 'name');
+  validateMinLen($name, 's_name');
 
   //  email形式チェック
-  validateMailCheck($email, 'email');
+  validateMailCheck($email, 's_email');
 
   //  PW文字数チェック
-  validatePwLength($password, 'password');
+  validatePwLength($password, 's_password');
 
   // 未入力チェック
-  validateRequired($name, 'name');
-  validateRequired($email, 'email');
-  validateRequired($password, 'password');
+  validateRequired($name, 's_name');
+  validateRequired($email, 's_email');
+  validateRequired($password, 's_password');
   validateRequired($certify_password, 'certify_password');
+
+  debug('$errorの中身:'.print_r($error, true));
+  debug('$_POSTの中身:'.print_r($_POST, true));
+
+  if(empty($error)){
+    validMatch($password, $certify_password, 'certify_password');
+    debug('$errorの中身:'.print_r($error,true));
+    if(empty($error)){
+      $_SESSION['join'] = $_POST;
+      header('Location:check.php');
+    }else{
+      debug('登録に失敗しました');
+    }
+  }
 }
 
 
@@ -43,7 +61,7 @@ if(!empty($_POST)){
 
     <!-- samplemodal-bg -->
     <div class="c-modalWrapper__bg">&nbsp;</div>
-
+    
     <!-- samplemodal-box -->
     <div class="c-modalWrapper__box">
     <div class="p-modal__btnWrapper">
@@ -103,8 +121,9 @@ if(!empty($_POST)){
           <dl>
             <dt>ニックネーム</dt>
             <dd>
-              <input type="text" name="name" size="35" maxlength="255" value="<?php print$_POST['name']; ?>"
+              <input type="text" name="s_name" size="35" maxlength="255" value="<?php if(!empty ($_POST ['s_name'])) echo htmlspecialchars($_POST['s_name'],ENT_QUOTES); ?>"
               >
+
               <!-- 
                 ♦htmlspecialcharsﾌｧﾝｸｼｮﾝ
                 htmlspecialcharsﾌｧﾝｸｼｮﾝを使うことで、HTMLﾀｸﾞの効果を打ち消して、イタズラのようなコードを無効化する
@@ -123,69 +142,70 @@ if(!empty($_POST)){
 
               
               <!-- ニックネーム入力に関するエラー文 -->
-              <?php if($error['name']==='blank'):?>
-                <p class ="error">ニックネームを入力してください</p>
+              <?php if($error['s_name']==='blank'):?>
+                <p class ="signup__error">ニックネームを入力してください</p>
               <?php endif; ?>
-              <?php if($error['name']==='max'):?>
-                <p class ="error">文字長すぎです</p>
+              <?php if($error['s_name']==='max'):?>
+                <p class ="signup__error">文字長すぎです</p>
               <?php endif; ?>
-              <?php if($error['name']==='min'):?>
-                <p class ="error">文字短すぎです</p>
+              <?php if($error['s_name']==='min'):?>
+                <p class ="signup__error">文字短すぎです</p>
               <?php endif; ?>
 
 
-              <?php var_dump ($error['name']);  ?>
 
               
             </dd>
 
             <dt>メールアドレス</dt>
             <dd>
-              <input type="text" name="email" size="35" maxlength="255"
-              value="<?php print(htmlspecialchars($_POST['email'],ENT_QUOTES)); ?>"
+              <input type="text" name="s_email" size="35" maxlength="255"
+              value="<?php if(!empty ($_POST['s_email'])) echo htmlspecialchars($_POST['s_email'],ENT_QUOTES); ?>"
               >
               
+              
               <!-- ニックネーム入力に関するエラー文 -->
-              <?php if($error['email']==='blank'):?>
-                <p class ="error">メールアドレスを入力してください</p>
+              <?php if($error['s_email']==='blank'):?>
+                <p class ="signup__error">メールアドレスを入力してください</p>
               <?php endif; ?>
 
-              <?php if($error['email']==='check'):?>
-                <p class ="error">正しくメールアドレスが入力されていないようです</p>
+              <?php if($error['s_email']==='check'):?>
+                <p class ="signup__error">正しくメールアドレスが入力されていないようです</p>
               <?php endif; ?>
 
             </dd>
 
             <dt>パスワード</dt>
             <dd>
-              <input type="password" name="password"  size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['password'],ENT_QUOTES)); ?>">
+              <input type="password" name="s_password"  size="10" maxlength="255" value="<?php if(!empty ($_POST['s_password'])) echo htmlspecialchars($_POST['s_password'],ENT_QUOTES); ?>">
 
-              <?php if($error['password']==='blank'):?>
-              <p class ="error">パスワードを入力してください</p>
+              <?php if($error['s_password']==='blank'):?>
+              <p class ="signup__error">パスワードを入力してください</p>
               <?php endif; ?>
 
-              <?php if($error['password']==='length'):?>
-              <p class ="error">パスワードは4文字以上で入力してください</p>
+              <?php if($error['s_password']==='length'):?>
+              <p class ="signup__error">パスワードは4文字以上で入力してください</p>
               <?php endif; ?>
             </dd>
 
             <dt>パスワード(確認)</dt>
             <dd>
-              <input type="password" name="certify_password" size="10" maxlength="20" value="<?php print(htmlspecialchars($_POST['certify_password'],ENT_QUOTES)); ?>">
+              <input type="password" name="certify_password" size="10" maxlength="20" value="<?php if(!empty ($_POST['certify_password'])) echo htmlspecialchars($_POST['certify_password'],ENT_QUOTES); ?>">
             </dd>
               <?php if($error['certify_password'] ==='blank'): ?>
-                <p class ="error">確認パスワードを入力してください</p>
+                <p class ="signup__error">確認パスワードを入力してください</p>
               <?php endif; ?>
 
-              <?php if($_POST['certify_password'] !== $_POST['password']): ?>
-                <p class ="error">パスワードと確認パスワードが一致しません</p>
+              <?php if($error['certify_password']==='unmatch'): ?>
+                <p class ="signup__error">パスワードと確認パスワードが一致しません</p>
               <?php endif;?>
               
 
           </dl>
 
           <div>
-            <input type="submit" value="入力内容を確認する" class="input-btn">
+            <input type="submit" name="signup" value="入力内容を確認する" class="input-btn">
+            <!-- <input type="submit" value="入力内容を確認する" class="input-btn"> -->
           </div>
         </form>
       </div>
@@ -199,4 +219,3 @@ if(!empty($_POST)){
 
   </div>
 </div>
-

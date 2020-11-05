@@ -2,36 +2,96 @@
 
 session_start();
 require('../function.php');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「　確認ページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 
-if(!isset($_SESSION['join'])){
-  //  joinにセッションがissetされてない場合
 
-  header('Location: index.php');
-  //  上記の条件(SESSIONに情報方ない)の場合
-  //  強制的にindex.phpに戻す処理
-  //  例えばURLを直接入力し、check.phpにアクセスした場合
-  //  $_SESSSIONに情報がない状態なので強制的に、index.phpにもどす処理
-  exit();
-}
 
-if(isset($_SESSION['join'])){
-  echo 'joinにデータありますよ！！';
-}
+  if(!isset($_SESSION['join'])){
+    //  joinにセッションがissetされてない場合
+    debug('$_SESSIONが空なのでindex.phpに戻ります');
+    header('Location: index.php');
+    //  上記の条件(SESSIONに情報方ない)の場合
+    //  強制的にindex.phpに戻す処理
+    //  例えばURLを直接入力し、check.phpにアクセスした場合
+    //  $_SESSSIONに情報がない状態なので強制的に、index.phpにもどす処理
+    exit();
+  }
 
-if(!empty($_POST)){
-  $statement = $db->prepare('INSERT INTO users SET user_name=?,mail=?, password=?, certify_password=?, created_at=NOW()');
-  $statement->execute(array(
-    $_SESSION['join']['name'],
-    $_SESSION['join']['email'],
-    sha1($_SESSION['join']['password']),
-    sha1($_SESSION['join']['certify_password'])
+  if(isset($_POST['submit_btn'])){
 
-	));
-	unset($_SESSION['join']);
+    if(!empty($_SESSION['join'])){
+      $username = $_SESSION['join']['s_name'];
+      $email = $_SESSION['join']['s_email'];
+      $password = $_SESSION['join']['l_password'];
 
-	header('Location: thanks.php');
-	exit();
-}
+      try{
+        $dbh = dbConnect();
+
+        $sql = 'INSERT INTO users (user_name,mail, password, created_at, updated_at) VALUES (:s_name, :s_email, :s_password, :login_time, :created_date)';
+
+        //$dataに自分が定義したname属性をキー、$_POSTを代入している変数を要素とする配列を代入
+        $data = array(
+          ':s_name'=>$username, ':s_email'=>$email, ':s_password'=>password_hash($password,PASSWORD_DEFAULT),
+        ':login_time' => date('Y-m-d H:i:s'), ':created_date' => date('Y-m-d H:i:s')
+        );
+
+        debug('dataの中身：'.print_r($data,true));
+
+
+        //クエリ実行
+        $stmt = queryPost($dbh, $sql, $data);
+        debug('クエリ実行の中身：'.print_r($stmt,true));
+
+          if(isset($stmt)){
+
+
+
+
+            header("Location:thanks.php");
+          }
+        
+        
+        
+
+      }catch(Exeption $e){
+        print("DB接続エラー:".$e->getMessage());
+
+      }
+
+
+
+      
+
+    }
+  }
+
+  
+  /*
+   $data =execute(array(
+     $_SESSION['join']['name'],
+     $_SESSION['join']['email'],
+     sha1($_SESSION['join']['password']),
+     sha1($_SESSION['join']['certify_password'])
+    ));
+   
+   $stmt = queryPost($dbh, $sql, $data);
+  */
+  /*
+    $statement = $db->prepare('INSERT INTO users SET user_name=?,mail=?, password=?, certify_password=?, created_at=NOW()');
+    debug('$statementの中身：'.print_r($statement,ture));
+
+    $statement->execute(array(
+      $_SESSION['join']['s_name'],
+      $_SESSION['join']['s_email'],
+      sha1($_SESSION['join']['s_password']),
+      sha1($_SESSION['join']['certify_password'])
+    ));
+  */
+
+  
+
 
 
 ?>
@@ -56,12 +116,12 @@ if(!empty($_POST)){
           <dl class="">
             <dt>ニックネーム</dt>
             <dd>
-              <?php echo(htmlspecialchars($_SESSION['join']['name'],ENT_QUOTES)); ?>
+              <?php echo(htmlspecialchars($_SESSION['join']['s_name'],ENT_QUOTES)); ?>
             </dd>
 
             <dt>メールアドレス</dt>
             <dd>
-              <?php echo(htmlspecialchars($_SESSION['join']['email'],ENT_QUOTES)); ?>
+              <?php echo(htmlspecialchars($_SESSION['join']['s_email'],ENT_QUOTES)); ?>
 
             </dd>
 
@@ -72,7 +132,7 @@ if(!empty($_POST)){
           </dl>
 
           <div>
-            <a href="index.php?action==rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" value="登録する">
+            <a href="index.php?action==rewrite">&laquo; &nbsp; 書き直す</a>|<input type="submit" name="submit_btn" value="登録する">
             
           </div>
         </form>

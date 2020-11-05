@@ -149,10 +149,42 @@ $(function(){
    * ”入力内容を確認する”ボタンを押されたときの
    * c-modal__bodyのインデックスへの挙動
   --------------------------------------------*/
+  if($('p').hasClass('login__error')){
 
-  if($('p').hasClass('error')){
+    console.log('ログインのエラーがあります');
 
-    console.log('find error#1');
+
+    $('.login').css({"color":"red"});
+    $('.c-modal__body').eq(0).removeClass('active');
+    $('.c-welcomeWrapper').removeClass('active');
+
+    console.log('アクティブを取り除きました');
+
+    $('.c-loginWrapper').fadeIn(0);
+    $('.c-modal__regiBody').fadeIn(0);
+    console.log('c-loginWrapper,c-modal__regiBodyをアクティブにしました');
+    /**
+     * c-welcomeWrapperでdisplay:none;を設定し、addClassメソッドを使用しactiveクラスを付け
+     * 足そうと考えていた
+     * しかし、activeクラスはつくものの、display:none;が消えず、activeにならなかったので
+     * fadeInメソッドでaddClassの代用をすることとした
+     */
+
+    $('.c-loginWrapper').addClass('active');
+    $('.c-modal__regBody').addClass('active');
+    console.log('c-modal__bodyをアクティブにしました');
+
+  /**
+   *ボタン表示の修正 
+    */
+  
+  
+  }
+
+
+  if($('p').hasClass('signup__error')){
+
+    console.log('登録時のエラーがあります');
 
 
     $('.error').css({"color":"red"});
@@ -173,16 +205,18 @@ $(function(){
 
     /**
      *ボタン表示の修正 
-     */
+    */
     
-      if($('.c-modal__body').eq(2).addClass('active')){
-      console.log('find error#2');
+    if($('.c-modal__body').eq(2).addClass('active')){
+    console.log('find signup__error#2');
 
-      $('.p-prev-btn').show();
-      $('.p-alter-btn').hide();
-      $('.p-next-btn').hide();
-      }
-    
+    $('.p-prev-btn').show();
+    $('.p-alter-btn').hide();
+    $('.p-next-btn').hide();
+    }
+  
   }
+
+ 
 
 });

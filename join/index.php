@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 require('../function.php');
@@ -9,6 +10,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 
   $_POST = $_SESSION['join'];
 
+}else{
 }
 ?>
 
@@ -24,13 +26,24 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
       <div class="p-startBtn">
         <a>登録</a>
       </div>
-
       <div class="p-loginBtn">
         <a>ログイン</a>
       </div>
 
     </div>
-    
+    <pre>
+      <?php
+
+        // $array = [
+        //   [‘田中’,25,’女性’],
+        //   [‘樋口’,32,’男性’],
+        //   [‘山本’,16,’女性’]
+        // ];
+
+        echo $array;
+      
+      ?>
+    </pre>
 
     
   

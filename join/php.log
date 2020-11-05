@@ -1,0 +1,885 @@
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585052
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:04:12 Asia/Tokyo] PHP Warning:  password_verify() expects parameter 2 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 70
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:04:12 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585052
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585141
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:05:41 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585141
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585154
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:05:54 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585154
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585346
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:09:06 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585346
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585356
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:09:16 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585356
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585440
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:10:40 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585440
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585477
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:11:17 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585477
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585531
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:12:11 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:12:11 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585531
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585563
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:12:43 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585563
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585572
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:12:52 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:12:52 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585572
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585642
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:14:02 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:02 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585642
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585662
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:14:22 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:22 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585662
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585663
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:14:23 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:23 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585663
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585664
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:14:24 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:24 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585664
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585669
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:29 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585669
+[05-Nov-2020 23:14:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:44 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:14:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585685
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:14:45 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:14:45 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585685
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585742
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:15:42 Asia/Tokyo] PHP Warning:  substr() expects parameter 1 to be string, array given in C:\xampp\htdocs\rot\join\join_c-loginWrapper.php on line 40
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:15:42 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585742
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585880
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:18:00 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585880
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：「　ログインページ　
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585949
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：$dbhの中身：PDO Object
+(
+)
+
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：$sql実行の中身：SELECT password FROM users WHERE mail=:l_email
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：$sth実行の中身：PDOStatement Object
+(
+    [queryString] => SELECT password FROM users WHERE mail=:l_email
+)
+
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：パスワードがアンマッチです。
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：「　ユーザー登録ページ　
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：>>>>>>   >>>>>>>    >>>>>>>> 画面表示処理開始
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：セッションID：9q46qd4322hi99n8aal41ohgfj
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [join] => Array
+        (
+            [s_name] => kattu
+            [s_email] => test@test.com
+            [s_password] => 1111
+            [certify_password] => 1111
+            [signup] => 入力内容を確認する
+        )
+
+)
+
+[05-Nov-2020 23:19:09 Asia/Tokyo] デバッグ：現在日時のタイムスタンプ：1604585949
