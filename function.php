@@ -24,6 +24,15 @@ function debug($str){
 }
 
 /*----------------------------
+  セッションについて
+------------------------------*/
+session_start();
+
+session_regenerate_id();
+
+
+
+/*----------------------------
   画面表示処理開始ログ吐き出し関数
 ------------------------------*/
 function debugLogStart(){
@@ -103,6 +112,8 @@ function validMatch($value1, $value2, $key){
 /*------------------------
  DB接続
 -------------------------*/
+
+//DB接続関数
 function dbConnect(){
   $dsn = 'mysql:dbname=rot;host=127.0.0.1;charset=utf8';
   $user = 'root';
@@ -139,6 +150,54 @@ function queryPost($dbh, $sql, $data){
   return $stmt;
 }
 
+//  ユーザー情報取得
+function getUser($u_id){
+	debug('ユーザー情報を取得します。');
+	try{
+		$dbh = dbConnect();
+		$sql = 'SELECT * FROM users WHERE id = :u_id';
+		$data = array(':u_id' => $u_id);
+		// クエリ実行
+		$stmt = queryPost($dbh, $sql, $data);
+    debug('getUser関数が成功');
+
+		if($stmt){
+			return $stmt->fetch(PDO::FETCH_ASSOC);
+		}else{
+      debug('getUser関数が失敗');
+
+      return false;
+      
+		}
+	}catch(Exception $e){
+		error_log('エラー発生：'.$e->getMessage());
+	}
+}
+
+//  投稿情報を取得
+function getPost($users_u_id, $posts_p_id){
+	debug('投稿情報を取得します。');
+	debug('ユーザID：'.$posts_u_id);
+	debug('投稿ID：'.$posts_p_id);
+
+	try{
+		$dbh = dbConnect();
+		$sql = 'SELECT * FROM posts WHERE user_id = :u_id AND id = :p_id';
+		$data = array(':u_id' => $posts_u_id, ':p_id' => $posts_p_id);
+
+		// クエリ実行
+		$stmt = queryPost($dbh, $sql, $data);
+
+		if($stmt){
+			return $stmt->fetch(PDO::FETCH_ASSOC);
+		}else{
+			return false;
+		}
+	}catch(Exception $e){
+		error_log('エラー発生：'.$e->getMessage());
+	}
+}
+
 
 /*
 try{
@@ -149,5 +208,81 @@ try{
 }
 */
 
+//  サニタイズ
+function sanitize($str){
+  return htmlspecialchars($str, ENT_QUOTES);
+}
+
+
+//  フォームの入力保持
+function getFormData($str, $flg=false){
+  debug('getFormData発火します');
+  debug('$str--情報：'.print_r($str,true));
+  debug('$flg--情報：'.print_r($flg,true));
+
+
+  if($flg){
+    $method = $_GET;
+  }else{
+    $method = $_POST;
+  }
+  debug('$methodの中身'.print_r($method,true));
+
+  global $dbFormData;
+  
+
+
+  //  1 ユーザーデータがある場合
+  if(!empty($dbFormData)){
+    debug('1　発火');
+
+    // 保留：2 フォームのエラーがある場合
+    if(!empty($error[$str])){
+      debug('2　発火');
+
+      //保留：3 POSTにデータがある場合
+      //疑問？？  なぜ＄＿GETではないのか？
+      if(isset($method[$str])){
+        debug('3　発火');
+
+        return $method[$str];
+      }else{
+        return $dbFormData[$str];
+      }
+
+    } else{
+      //  2-else POSTにデータがあり、DBの情報と違う場合
+      debug('2-else　発火');
+
+      if(isset($method[$str]) && $method[$str] !== $dbFormData[$str]){
+
+        //違っていた場合の処理→POST送信
+        debug('2-else-if 発火');
+				return $method[$str];
+			}else{
+        //POSTにデータがあり、DBの情報($_GETで取得した情報と)
+        //同じだった場合
+        debug('2-else-if-else 発火');
+
+        return $dbFormData[$str];
+
+
+      }
+      debug('!empty($dbFormData)の条件がクリアされました');
+    }
+  }else{
+    if(isset($method[$str])){
+			return sanitize($method[$str]);
+    }
+  }
+}
+
+//  画像処理
+function uploadImg($file, $key){
+  debug('画像アップロード処理開始');
+  debug('FILE情報：'.print_r($file,true));
+  
+  
+}
 
 ?>

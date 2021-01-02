@@ -1,12 +1,19 @@
+<?php 
+
+require('function.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
-<head>
- 
- 
 
-</head>
+<?php require"head.php" ?>
+
 <body>
-<h1>ログインに成功したよ</h1>
+  <?php require "header.php";?>
+
+  <?php require "postList.php"?>
+
 
 </body>
 </html>

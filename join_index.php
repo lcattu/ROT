@@ -1,8 +1,5 @@
 <?php
-
-session_start();
-
-require('../function.php');
+require('function.php');
 
 if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   //  check.phpから『書き直す』をクリックした際
@@ -14,10 +11,10 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
 }
 ?>
 
-<?php require "../head.php"; ?>
+<?php require "head.php"; ?>
 <body>
   <!-- ヘッダー -->
-  <?php require "join_header.php"; ?>
+  <?php require "header.php"; ?>
 
   <div class="container-sm">
     <h1>Replication of Twitter</h1>
@@ -56,7 +53,7 @@ if($_REQUEST['action']=='rewrite' && isset($_SESSION['join'])){
   <?php require'join_c-welcomeWrapper.php' ?>
 
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 
-<?php require"../footer.php" ?>
+<?php require"footer.php" ?>

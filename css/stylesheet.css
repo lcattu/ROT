@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*---------------
 foundation
 -----------------*/
@@ -355,5 +356,247 @@ p-modal__body
 .p-modal__body form {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.l-siteWrap {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relaitve;
+  border-right: 1px solid #e6ecf0;
+  border-left: 1px solid #e6ecf0;
+}
+
+.l-siteWrap .c-post {
+  background: #f5f5f5;
+  padding: 8px;
+  margin: 4px auto;
+  position: relative;
+}
+
+.l-siteWrap .c-post .c-contents .c-iconWrapper {
+  width: 72px;
+  height: 72px;
+  background-color: #55acee;
+  position: absolute;
+  top: 16px;
+  overflow: hidden;
+}
+
+.l-siteWrap .c-post .c-contents .c-iconWrappera {
+  display: block;
+  height: 100%;
+}
+
+.l-siteWrap .c-post .c-contents .c-iconWrapper__usericon {
+  width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper {
+  margin-left: 88px;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper .postContents__head {
+  padding: 8px 0;
+  position: relative;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper .postContents__head a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper .postContents__head time {
+  color: #aaa;
+  top: 25px;
+  font-size: 12px;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper .postContents__body__image {
+  width: 98%;
+  max-height: 506px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper .postContents__foot {
+  text-align: right;
+  margin-top: 24px;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper .postContents__foot .commentBtn {
+  display: inline-block;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.l-siteWrap .c-post .c-contents .postWrapper .postContents__foot .goodBtn {
+  display: inline-block;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+/*-----------------------
+(仮):p-profileWrapper
+-------------------------*/
+.p_profileWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e6ecf0;
+  padding: 17px;
+}
+
+.p_profileWrapper__left .p_profile__img {
+  padding: 0.5em 1em;
+  margin: 2em 1em;
+  font-weight: bold;
+  color: #6091d3;
+  /*文字色*/
+  background: #FFF;
+  border: solid 3px #6091d3;
+  /*線*/
+}
+
+.p_profileWrapper__left .p_profile__img img {
+  height: 290px;
+  width: 210px;
+}
+
+.p_profileWrapper__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+}
+
+.p_profileWrapper__right .p_profile__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 23px;
+  margin: 22px 21px;
+}
+
+.p_profileWrapper__right .p_profile__intro {
+  position: relative;
+  height: 228px;
+  margin: 0.5em 1em;
+  padding: 1.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+}
+
+.p_profileWrapper__right .p_profile__intro__title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #95ccff;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .p_profileWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .p_profileWrapper__left {
+    margin: 0px auto;
+  }
+  .p_profileWrapper__left .p_profile__img {
+    margin: 1em 1em;
+    padding: 0px;
+    text-align: center;
+  }
+  .p_profileWrapper__left .p_profile__img img {
+    width: 85px;
+    height: 85px;
+  }
+  .p_profileWrapper__right .p_profile__name {
+    font-size: 18px;
+    padding: 0.5em 1em;
+    margin: 0px;
+  }
+  .p_profileWrapper__right .p_profile__name p {
+    margin: 0px;
+  }
+  .p_profileWrapper__right .p_profile__intro {
+    margin: 0.5em 1em;
+    height: 150px;
+  }
+}
+
+/*-----------------------
+(仮):user_proEdit / p-proEditWrapper
+-------------------------*/
+.u_Editpic {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ccc;
+  color: #aaa;
+  background: #f6f5f5;
+  width: 120px;
+  height: 120px;
+  padding: 4px;
+  margin: 0 auto;
+}
+
+.user_picture {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 127px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 /*# sourceMappingURL=stylesheet.css.map */

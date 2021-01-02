@@ -1,5 +1,5 @@
 <?php  
-session_start();
+
 // PHPを実行した後でも、セットした情報を覚えている特性をもつ
 
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
@@ -34,19 +34,49 @@ if(!empty($_POST['signup'])){
   validateRequired($email, 's_email');
   validateRequired($password, 's_password');
   validateRequired($certify_password, 'certify_password');
+  validMatch($password, $certify_password, 'certify_password');
 
   debug('$errorの中身:'.print_r($error, true));
   debug('$_POSTの中身:'.print_r($_POST, true));
 
   if(empty($error)){
-    validMatch($password, $certify_password, 'certify_password');
     debug('$errorの中身:'.print_r($error,true));
-    if(empty($error)){
-      $_SESSION['join'] = $_POST;
-      header('Location:check.php');
-    }else{
-      debug('登録に失敗しました');
+    
+    try{
+      $dbh = dbConnect();
+
+      //パスワードをハッシュ化したものを$hashに代入
+      $hash = password_hash($password, PASSWORD_BCRYPT);
+
+      $sql = 'INSERT INTO users (user_name,mail, password, created_at, updated_at) VALUES (:s_name, :s_email, :s_password, :login_time, :created_date)';
+
+      //$dataに自分が定義したname属性をキー、$_POSTを代入している変数を要素とする配列を代入
+      $data = array(
+        ':s_name'=>$name,
+        ':s_email'=>$email,
+        ':s_password'=>$hash,
+        ':login_time' => date('Y-m-d H:i:s'), 
+        ':created_date' => date('Y-m-d H:i:s')
+      );
+      //debug----------------------------------
+      debug('dataの中身：'.print_r($data,true));
+
+
+      //クエリ実行
+      $stmt = queryPost($dbh, $sql, $data);
+
+      if(isset($stmt)){
+
+
+
+
+        header("Location:join_thanks.php");
+       }
+   }catch(Exeption $e){
+      print("DB接続エラー:".$e->getMessage());
+
     }
+
   }
 }
 
@@ -121,7 +151,7 @@ if(!empty($_POST['signup'])){
           <dl>
             <dt>ニックネーム</dt>
             <dd>
-              <input type="text" name="s_name" size="35" maxlength="255" value="<?php if(!empty ($_POST ['s_name'])) echo htmlspecialchars($_POST['s_name'],ENT_QUOTES); ?>"
+              <input type="text" name="s_name" value="<?php if(!empty ($_POST ['s_name'])) echo $_POST['s_name']; ?>"
               >
 
               <!-- 
@@ -159,8 +189,8 @@ if(!empty($_POST['signup'])){
 
             <dt>メールアドレス</dt>
             <dd>
-              <input type="text" name="s_email" size="35" maxlength="255"
-              value="<?php if(!empty ($_POST['s_email'])) echo htmlspecialchars($_POST['s_email'],ENT_QUOTES); ?>"
+              <input type="text" name="s_email" 
+              value="<?php if(!empty ($_POST['s_email'])) echo $_POST['s_email']; ?>"
               >
               
               
@@ -177,7 +207,7 @@ if(!empty($_POST['signup'])){
 
             <dt>パスワード</dt>
             <dd>
-              <input type="password" name="s_password"  size="10" maxlength="255" value="<?php if(!empty ($_POST['s_password'])) echo htmlspecialchars($_POST['s_password'],ENT_QUOTES); ?>">
+              <input type="password" name="s_password" value="<?php if(!empty ($_POST['s_password'])) echo $_POST['s_password']; ?>">
 
               <?php if($error['s_password']==='blank'):?>
               <p class ="signup__error">パスワードを入力してください</p>
@@ -190,7 +220,7 @@ if(!empty($_POST['signup'])){
 
             <dt>パスワード(確認)</dt>
             <dd>
-              <input type="password" name="certify_password" size="10" maxlength="20" value="<?php if(!empty ($_POST['certify_password'])) echo htmlspecialchars($_POST['certify_password'],ENT_QUOTES); ?>">
+              <input type="password" name="certify_password" value="<?php if(!empty ($_POST['certify_password'])) echo $_POST['certify_password']; ?>">
             </dd>
               <?php if($error['certify_password'] ==='blank'): ?>
                 <p class ="signup__error">確認パスワードを入力してください</p>

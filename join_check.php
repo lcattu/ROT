@@ -1,7 +1,6 @@
 <?php 
-
 session_start();
-require('../function.php');
+require('function.php');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debug('「　確認ページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
@@ -29,28 +28,30 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
       try{
         $dbh = dbConnect();
 
+        //パスワードをハッシュ化したものを$hashに代入
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+
         $sql = 'INSERT INTO users (user_name,mail, password, created_at, updated_at) VALUES (:s_name, :s_email, :s_password, :login_time, :created_date)';
 
         //$dataに自分が定義したname属性をキー、$_POSTを代入している変数を要素とする配列を代入
         $data = array(
-          ':s_name'=>$username, ':s_email'=>$email, ':s_password'=>password_hash($password,PASSWORD_DEFAULT),
+          ':s_name'=>$username, ':s_email'=>$email, ':s_password'=>$hash,
         ':login_time' => date('Y-m-d H:i:s'), ':created_date' => date('Y-m-d H:i:s')
         );
-
+        //debug----------------------------------
         debug('dataの中身：'.print_r($data,true));
 
 
         //クエリ実行
         $stmt = queryPost($dbh, $sql, $data);
-        debug('クエリ実行の中身：'.print_r($stmt,true));
 
-          if(isset($stmt)){
-
+        if(isset($stmt)){
 
 
 
-            header("Location:thanks.php");
-          }
+
+         header("Location:join_thanks.php");
+        }
         
         
         
@@ -98,10 +99,10 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
 
 
 
-<?php require "../head.php"; ?>
+<?php require "head.php"; ?>
 <body>
   <!-- ヘッダー -->
-  <?php require "join_header.php" ?>
+  <?php require "header.php" ?>
 
   <h1>Replication of Twitter</h1>
 
@@ -143,4 +144,4 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
           
   </div>
 </body>
-<?php require"../footer.php" ?>
+<?php require"footer.php" ?>

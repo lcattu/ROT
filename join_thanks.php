@@ -1,7 +1,7 @@
-<?php require "../head.php"; ?>
+<?php require "head.php"; ?>
 <body>
   <!-- ヘッダー -->
-  <?php require "join_header.php" ?>
+  <?php require "header.php" ?>
 
   <h1>Replication of Twitter</h1>
 
@@ -15,4 +15,4 @@
 
     </div>
 </body>
-<?php require"../footer.php" ?>
+<?php require"footer.php" ?>

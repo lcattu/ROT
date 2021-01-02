@@ -144,6 +144,27 @@ $(function(){
         
   })
 
+
+  /**----------------------------------------
+   * headerのログインボタンをを押したときの挙動
+  --------------------------------------------*/
+
+  $(window).on('load',function(){
+    if(location.href == "http://localhost:8888/rot/join_index.php?action==login"){
+      console.log('==loginﾘﾝｸが押されたのでアクティブクラス');
+      $('.c-loginWrapper').fadeIn();
+    
+      $('.c-modal__regiBody').addClass('active');
+        
+      
+
+
+    }
+
+        
+  })
+
+
   /**----------------------------------------
    * join/index.php
    * ”入力内容を確認する”ボタンを押されたときの
