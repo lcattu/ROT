@@ -1,7 +1,7 @@
 <?php
 
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
-debug('「　★★★編集　');
+debug('「　★★★プロフィール編集　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
@@ -12,9 +12,8 @@ require('auth.php');
 	画面処理
 -------------------------------*/
 //DBからユーザーデータを取得
-
 $dbFormData = getUser($_SESSION['user_id']);
-debug('$dbFormData--情報：'.print_r($dbFormData,true));
+debug('変数dbFormDataで取得したユーザー情報：'.print_r($dbFormData,true));
 
 //$_POSTにデータがあった場合の処理
 if(!empty($_POST)){
@@ -22,10 +21,10 @@ if(!empty($_POST)){
 	debug('post情報：'.print_r($_POST,true));
 
 	$username = $_POST['username'];
-	$mail = $_POST['mail'];
+	//$mail = $_POST['mail'];
 
 	//	画像アップロード・パスを格納
-	$user_img = (!empty($_FILES['user_img']['name']))?uploadImg($_FILES['user_img'],'user_img'):'';
+	//$user_img = (!empty($_FILES['user_img']['name']))?uploadImg($_FILES['user_img'],'user_img'):'';
 
 	//	DBに画像をデフォルト登録してあることが前提？
 	//	NO→ユーザー登録時にデフォルト登録してあるのかも
@@ -46,9 +45,9 @@ if(!empty($_POST)){
 			// DBへ接続
 			$dbh = dbConnect();
 			// SQL文作成
-			$sql = 'UPDATE users SET user_name = :u_name, mail = :mail, user_img = :user_img WHERE id = :u_id ';
+			$sql = 'UPDATE users SET user_name = :u_name WHERE id = :u_id';
 
-			$data = array(':u_name' => $username, ':mail'=>$mail, ':user_img'=>$user_img, ':u_id'=>$dbFormData['id'] );
+			$data = array(':u_name' => $username, ':u_id' => $dbFormData['id']);
 			
 			// クエリ実行
 			$stmt = queryPost($dbh, $sql, $data);

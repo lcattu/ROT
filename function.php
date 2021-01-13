@@ -217,16 +217,14 @@ function sanitize($str){
 //  フォームの入力保持
 function getFormData($str, $flg=false){
   debug('getFormData発火します');
-  debug('$str--情報：'.print_r($str,true));
-  debug('$flg--情報：'.print_r($flg,true));
-
-
   if($flg){
     $method = $_GET;
+    debug('$_GETを$methodに代入');
   }else{
     $method = $_POST;
+    debug('$_POSTを$methodに代入');
   }
-  debug('$methodの中身'.print_r($method,true));
+  debug('getFormData内の$methodの中身'.print_r($method,true));
 
   global $dbFormData;
   
@@ -234,41 +232,35 @@ function getFormData($str, $flg=false){
 
   //  1 ユーザーデータがある場合
   if(!empty($dbFormData)){
-    debug('1　発火');
+    debug('1 ユーザーデータがある場合');
 
     // 保留：2 フォームのエラーがある場合
     if(!empty($error[$str])){
-      debug('2　発火');
+      debug('2 フォームのエラーがある場合');
 
       //保留：3 POSTにデータがある場合
       //疑問？？  なぜ＄＿GETではないのか？
       if(isset($method[$str])){
-        debug('3　発火');
-
+        debug('3 POSTにデータがある場合');
         return $method[$str];
       }else{
         return $dbFormData[$str];
       }
-
     } else{
       //  2-else POSTにデータがあり、DBの情報と違う場合
-      debug('2-else　発火');
+      debug('POSTにデータがあり、DBの情報と違う場合');
 
       if(isset($method[$str]) && $method[$str] !== $dbFormData[$str]){
-
         //違っていた場合の処理→POST送信
-        debug('2-else-if 発火');
+        debug('POSTにデータがあり、DBの情報と違う場合 if内のture処理');
 				return $method[$str];
 			}else{
         //POSTにデータがあり、DBの情報($_GETで取得した情報と)
         //同じだった場合
-        debug('2-else-if-else 発火');
-
+        debug('変更しない');
         return $dbFormData[$str];
-
-
       }
-      debug('!empty($dbFormData)の条件がクリアされました');
+      debug('!empty($dbFormData)の条件を通過');
     }
   }else{
     if(isset($method[$str])){
