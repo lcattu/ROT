@@ -21,7 +21,7 @@ if(!empty($_POST)){
 	debug('post情報：'.print_r($_POST,true));
 
 	$username = $_POST['username'];
-	//$mail = $_POST['mail'];
+	$mail = $_POST['mail'];
 
 	//	画像アップロード・パスを格納
 	//$user_img = (!empty($_FILES['user_img']['name']))?uploadImg($_FILES['user_img'],'user_img'):'';
@@ -45,9 +45,9 @@ if(!empty($_POST)){
 			// DBへ接続
 			$dbh = dbConnect();
 			// SQL文作成
-			$sql = 'UPDATE users SET user_name = :u_name WHERE id = :u_id';
+			$sql = 'UPDATE users SET user_name = :u_name, mail = :u_mail WHERE id = :u_id';
 
-			$data = array(':u_name' => $username, ':u_id' => $dbFormData['id']);
+			$data = array(':u_name' => $username, ':u_mail'=>$mail, ':u_id' => $dbFormData['id']);
 			
 			// クエリ実行
 			$stmt = queryPost($dbh, $sql, $data);
