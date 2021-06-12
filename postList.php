@@ -21,7 +21,7 @@ debugLogStart();
 
         <div class="c-iconWrapper">
           <a href="#">
-            <img src="image/icon_demo.jpg" class="c-iconWrapper__usericon">
+            <img src="<?php echo showImg(sanitize($dbPostUserInfo['user_img'])); ?>" class="c-iconWrapper__usericon">
           </a>
         </div>
         <div class="postWrapper">

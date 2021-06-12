@@ -7,7 +7,6 @@ debugLogStart();
 
 // ログイン認証
 require('auth.php');
-
 /*-------------------------------
 	画面処理
 -------------------------------*/
@@ -22,6 +21,12 @@ if(!empty($_POST)){
 
 	$username = $_POST['username'];
 	$mail = $_POST['mail'];
+//	画像アップロード・パスを格納
+	$user_image = (!empty($_FILES['user_img']['name']))?uploadImg($_FILES['user_img'],'user_image'):'';
+
+//画像をpostしなかった場合、すでにDB登録されていたらDBのパスを入れる
+	$user_image = (empty($user_image) && !empty($dbFormData['user_image'])) ? $dbFormData['user_image'] : $user_image;
+
 
 	//	画像アップロード・パスを格納
 	//$user_img = (!empty($_FILES['user_img']['name']))?uploadImg($_FILES['user_img'],'user_img'):'';
@@ -45,9 +50,9 @@ if(!empty($_POST)){
 			// DBへ接続
 			$dbh = dbConnect();
 			// SQL文作成
-			$sql = 'UPDATE users SET user_name = :u_name, mail = :u_mail WHERE id = :u_id';
+			$sql = 'UPDATE users SET user_name = :u_name, mail = :u_mail, user_image = :user_img WHERE id = :u_id';
 
-			$data = array(':u_name' => $username, ':u_mail'=>$mail, ':u_id' => $dbFormData['id']);
+			$data = array(':u_name' => $username, ':u_mail'=>$mail,':user_img'=>$user_image , ':u_id' => $dbFormData['id']);
 			
 			// クエリ実行
 			$stmt = queryPost($dbh, $sql, $data);
@@ -55,6 +60,8 @@ if(!empty($_POST)){
 			// クエリ成功の場合
 			if($stmt){
 				debug('成功しました');
+				debug('$user_image'.print_r($user_image,ture));
+
 				debug('マイページへ遷移します。');
 				header("Location:user_proFile.php?u_id=".$_SESSION['user_id']);
 			}else{
@@ -66,7 +73,6 @@ if(!empty($_POST)){
 		}
 	}
 }
-
 
 
 debug('画面表示処理終了<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
@@ -84,10 +90,13 @@ debug('画面表示処理終了<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 			<!-- 画像データの編集 -->
 			<label class ="u_Editpic">
 				<!-- クラス名(仮) -->
-				<i class="far fa-user fa-3x"></i>
-				<input type="hidden">
+				<i class="far fa-user fa-3x" style="<?php if(!empty(getFormData('user_img'))) echo 'display: none'; ?>"></i>
+				<input type="hidden" name="MAX_FILE_SIZE" value="3145728">
 
 				<input type="file" name="user_img" class="user_picture">
+
+				<img src="<?php echo getFormData('user_img'); ?>" alt="ユーザー画像" class="prev-img" style="<?php if(empty(getFormData('user_img'))) echo 'display:none' ?>">
+
 
 			</label>
 

@@ -50,7 +50,9 @@ if(!empty($_GET['u_id']) && !empty(getUser($u_id))){
       <div class="p_profileWrapper__left">
         <!-- ユーザーの写真 -->
         <div class="p_profile__img">
-          <img src="./image/selficon.jpg" alt="">
+         <a href="userpage.php?u_id=<?php echo sanitize($dbPostUserInfo['id']); ?>">
+            <img class="user-icon" src="<?php echo showImg($dbPostUserInfo['user_image']); ?>">
+         </a>
 
         </div>
       </div>

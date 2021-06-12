@@ -2,10 +2,10 @@
 <header class="l-header01">
   <div class="l-headerWrapper">
     <div class="l-headerWrapper__left">
-      <img src="image/ROT_logo.jpg" alt="" class="d-none d-lg-block  p-logo__image-PC">
+      <img src="images/ROT_logo.jpg" alt="" class="d-none d-lg-block  p-logo__image-PC">
 
 
-      <img src="image/logo_test.jpg" alt="" class="d-lg-none p-logo__image">
+      <img src="images/logo_test.jpg" alt="" class="d-lg-none p-logo__image">
     </div>
 
   

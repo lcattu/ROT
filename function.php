@@ -259,6 +259,7 @@ function getFormData($str, $flg=false){
         //同じだった場合
         debug('変更しない');
         return $dbFormData[$str];
+        
       }
       debug('!empty($dbFormData)の条件を通過');
     }
@@ -269,12 +270,87 @@ function getFormData($str, $flg=false){
   }
 }
 
-//  画像処理
+//  画像のアップロードを処理する関数
 function uploadImg($file, $key){
   debug('画像アップロード処理開始');
   debug('FILE情報：'.print_r($file,true));
+
+
+  if(isset($file['error']) && is_int($file['error'])){
+    //is_int関数･･･与えられた変数の型が整数かどうかを検査
+    debug('バリデーションチェック開始');
+    try{
+      switch($file['error']){
+        case UPLOAD_ERR_OK: //OK
+					break;
+				case UPLOAD_ERR_NO_FILE: //ファイル未選択の場合
+					throw new RuntimeException('ファイルが選択されていません');
+				case UPLOAD_ERR_INI_SIZE: //php.ini定義の最大サイズが超過した場合
+				case UPLOAD_ERR_FORM_SIZE: //フォーム定義の最大サイズが超過した場合
+					throw new RuntimeException('ファイルサイズが大きすぎます');
+				default:
+					throw new RuntimeException('その他のエラーが発生しました');
+      }
+
+      //  upload画像が指定した拡張子とあっているか確認
+      $type =@exif_imagetype($file['tmp_name']);
+       //  画像の先頭バイトを読み そのサインを調べる
+      if(!in_array($type,[IMAGETYPE_GIF, IMAGETYPE_JPEG, IMAGETYPE_PNG], true)){
+        throw new RuntimeExeption('画像形式が未対応です');
+      }
+
+        //ファイル名をハッシュ化しパスを生成
+        $path = 'uploads/'.sha1_file($file['tmp_name']).image_type_to_extension($type);
+
+        if(!move_uploaded_file($file['tmp_name'], $path)){
+          // !move_uploaded_file関数とは･･･ 
+          /*
+             指定されたファイルが有効なアップロードファイルかどうか確認し、有効な場合指定したファイル名に移動する
+          */
+          throw new RuntimeException('ファイル保存時にエラーが発生しました');
+        }
+
+			//保存したファイルパスのパーミッションを変更する
+      chmod($path,0644);
+      //chmodとは･･･
+      /*
+      指定されたファイルモードを指定したものに変更しようと試みます。
+      →ここでは、$pathを0644にしている
+      */
+
+      //パーミッションとは
+      /*
+       ファイルシステム上でファイルやディレクトリなどに設定されるユーザーやユーザーグループごとのアクセス許諾（アクセス権）を指す。
+      */
+
+      debug('ファイルは正常にアップロードされました');
+      debug('ファイルパス：'.$path);
+
+      return $path;
+
+    }catch(RuntimeException $e){
+      debug($e->getMessage());
+      global $error;
+      $error[$key] = $e->getMessage();
+    }
+    debug('user_proEdit.phpの検証：'.print_r(getFormData('user_img'),true));
+
+    debug('バリデーションチェック終了');
+
+  }
   
-  
+}
+
+//  画像を表示するためために、画像がPOST登録されている場合とそうでない場合とに分けて表示する関数
+function showImg($path){
+  if(empty($path)){
+    return 'images/user-icon.png';
+    debug('user-icon.pngを挿入');
+  }else{
+    return $path;
+    debug('$pathを挿入');
+
+  }
 }
 
 ?>
